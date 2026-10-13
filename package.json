@@ -1,0 +1,29 @@
+{
+  "name": "odin-rps",
+  "version": "1.0.0",
+  "description": "",
+  "homepage": "https://github.com/singularwind979/odin-rps#readme",
+  "bugs": {
+    "url": "https://github.com/singularwind979/odin-rps/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/singularwind979/odin-rps.git"
+  },
+  "license": "ISC",
+  "author": "singularwind",
+  "type": "module",
+  "main": "index.js",
+  "scripts": {
+    "build": "tsc",
+    "start": "node dist/index.js",
+    "dev": "tsc --watch",
+    "typecheck": "tsc --noEmit",
+    "test": "vitest watch"
+  },
+  "devDependencies": {
+    "@types/node": "^26.6.5",
+    "typescript": "^7.0.2",
+    "vitest": "^5.0.3"
+  }
+}
