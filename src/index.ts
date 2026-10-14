@@ -33,3 +33,24 @@ const printRound = (round: Round): void =>
 
 const isGameOver = (scores: Scores, winScore: Score = 3): boolean => 
     scores[0] >= winScore || scores[1] >= winScore;
+
+const getHumanMove = getMoveByRandom;
+const getComputerMove = getMoveByRandom;
+
+const playGame = () => {
+    let scores: Scores = [0, 0];
+    let moves: Moves = ['r', 'r'];
+    console.log('round\t | moves\t | scores');
+    for (let i = 0 ; !isGameOver(scores); i++) {
+        moves = [getHumanMove(), getComputerMove()];
+        scores = playRound(moves, scores);
+        const round: Round = {
+            index: i,
+            moves: moves,
+            scores: scores
+        };
+        printRound(round);      
+    }
+};
+
+playGame();
