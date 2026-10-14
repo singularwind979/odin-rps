@@ -1,0 +1,209 @@
+/* Token */
+:root {
+  /* Theme color tokens — levels 1..9 = Tailwind 100..900 */
+  /* neutral: one themeless grey */
+  --color-white: #fafafa;
+  --color-black: #0a0a0a;
+  --color-neutral-1: #f5f5f5;
+  --color-neutral-2: #e5e5e5;
+  --color-neutral-3: #d4d4d4;
+  --color-neutral-4: #a3a3a3;
+  --color-neutral-5: #737373;
+  --color-neutral-6: #525252;
+  --color-neutral-7: #404040;
+  --color-neutral-8: #262626;
+  --color-neutral-9: #171717;
+
+  /* Theme color tokens — warm: rose, amber */
+  --color-rose-1: #ffe4e6;
+  --color-rose-2: #fecdd3;
+  --color-rose-3: #fda4af;
+  --color-rose-4: #fb7185;
+  --color-rose-5: #f43f5e;
+  --color-rose-6: #e11d48;
+  --color-rose-7: #be123c;
+  --color-rose-8: #9f1239;
+  --color-rose-9: #881337;
+
+  --color-amber-1: #fef3c7;
+  --color-amber-2: #fde68a;
+  --color-amber-3: #fcd34d;
+  --color-amber-4: #fbbf24;
+  --color-amber-5: #f59e0b;
+  --color-amber-6: #d97706;
+  --color-amber-7: #b45309;
+  --color-amber-8: #92400e;
+  --color-amber-9: #78350f;
+
+  /* Theme color tokens — cold: emerald, sky */
+  --color-emerald-1: #d1fae5;
+  --color-emerald-2: #a7f3d0;
+  --color-emerald-3: #6ee7b7;
+  --color-emerald-4: #34d399;
+  --color-emerald-5: #10b981;
+  --color-emerald-6: #059669;
+  --color-emerald-7: #047857;
+  --color-emerald-8: #065f46;
+  --color-emerald-9: #064e3b;
+
+  --color-sky-1: #e0f2fe;
+  --color-sky-2: #bae6fd;
+  --color-sky-3: #7dd3fc;
+  --color-sky-4: #38bdf8;
+  --color-sky-5: #0ea5e9;
+  --color-sky-6: #0284c7;
+  --color-sky-7: #0369a1;
+  --color-sky-8: #075985;
+  --color-sky-9: #0c4a6e;
+
+  /* Theme color tokens — cool: violet, pink */
+  --color-violet-1: #ede9fe;
+  --color-violet-2: #ddd6fe;
+  --color-violet-3: #c4b5fd;
+  --color-violet-4: #a78bfa;
+  --color-violet-5: #8b5cf6;
+  --color-violet-6: #7c3aed;
+  --color-violet-7: #6d28d9;
+  --color-violet-8: #5b21b6;
+  --color-violet-9: #4c1d95;
+
+  --color-pink-1: #fce7f3;
+  --color-pink-2: #fbcfe8;
+  --color-pink-3: #f9a8d4;
+  --color-pink-4: #f472b6;
+  --color-pink-5: #ec4899;
+  --color-pink-6: #db2777;
+  --color-pink-7: #be185d;
+  --color-pink-8: #9d174d;
+  --color-pink-9: #831843;
+
+  /* Semantic color tokens — role defaults (bg→1, b→2, font→8); edit here to re-default */
+  --bg-neutral: var(--color-neutral-1);
+  --b-neutral: var(--color-neutral-2);
+  --font-neutral: var(--color-neutral-8);
+
+  --bg-rose: var(--color-rose-1);
+  --b-rose: var(--color-rose-2);
+  --font-rose: var(--color-rose-8);
+
+  --bg-amber: var(--color-amber-1);
+  --b-amber: var(--color-amber-2);
+  --font-amber: var(--color-amber-8);
+
+  --bg-emerald: var(--color-emerald-1);
+  --b-emerald: var(--color-emerald-2);
+  --font-emerald: var(--color-emerald-8);
+
+  --bg-sky: var(--color-sky-1);
+  --b-sky: var(--color-sky-2);
+  --font-sky: var(--color-sky-8);
+
+  --bg-violet: var(--color-violet-1);
+  --b-violet: var(--color-violet-2);
+  --font-violet: var(--color-violet-8);
+
+  --bg-pink: var(--color-pink-1);
+  --b-pink: var(--color-pink-2);
+  --font-pink: var(--color-pink-8);
+
+  /* Semantic black/white — themeless pair (bg + font only, no b) */
+  --bg-white: var(--color-white);
+  --bg-black: var(--color-black);
+
+  --font-white: var(--color-white);
+  --font-black: var(--color-black);
+
+  /* Grain tokens — px (not rem); odd steps 2-based, even steps 3-based */
+  --grain-1: 2px;
+  --grain-2: 3px;
+  --grain-3: 4px;
+  --grain-4: 6px;
+  --grain-5: 8px;
+  --grain-6: 12px;
+
+  /* Semantic tokens — line aliases the grain */
+  --line-1: var(--grain-1);
+  --line-2: var(--grain-2);
+  --line-3: var(--grain-3);
+  --line-4: var(--grain-4);
+
+  /* Semantic tokens — corner aliases the grain */
+  --corner-1: var(--grain-1);
+  --corner-2: var(--grain-2);
+  --corner-3: var(--grain-3);
+  --corner-4: var(--grain-4);
+  --corner-5: var(--grain-5);
+  --corner-6: var(--grain-6);
+
+  /* Semantic tokens — haze aliases the grain */
+  --haze-1: var(--grain-1);
+  --haze-2: var(--grain-2);
+  --haze-3: var(--grain-3);
+  --haze-4: var(--grain-4);
+
+  /* Proportion tokens — anchor: fixed reference points none, inf, half, full */
+  --none: 0;
+  --inf: 9999px;
+  --frac-half: 0.5;
+  --frac-full: 1;
+  --pct-half: 50%;
+  --pct-full: 100%;
+
+  /* Proportion tokens — alpha: 0.04 → 0.08 → 0.16 → 0.32 */
+  --alpha-1: 0.04;
+  --alpha-2: 0.08;
+  --alpha-3: 0.16;
+  --alpha-4: 0.32;
+
+  /* Scale tokens — rem stored (1rem = 16px) */
+  --scale-1: 0.375rem;   /* 6px */
+  --scale-2: 0.5rem;     /* 8px */
+  --scale-3: 0.75rem;    /* 12px */
+  --scale-4: 1rem;       /* 16px */
+  --scale-5: 1.5rem;     /* 24px */
+  --scale-6: 2rem;       /* 32px */
+  --scale-7: 3rem;       /* 48px */
+  --scale-8: 4rem;       /* 64px */
+  --scale-9: 6rem;       /* 96px */
+  --scale-10: 8rem;      /* 128px */
+  --scale-11: 12rem;     /* 192px */
+  --scale-12: 16rem;     /* 256px */
+  --scale-13: 24rem;     /* 384px */
+  --scale-14: 32rem;     /* 512px */
+
+  /* Semantic tokens — space / font / size alias the scale */
+  --space-1: var(--scale-1);   /* 6px */
+  --space-2: var(--scale-2);   /* 8px */
+  --space-3: var(--scale-3);   /* 12px */
+  --space-4: var(--scale-4);   /* 16px */
+  --space-5: var(--scale-5);   /* 24px */
+  --space-6: var(--scale-6);   /* 32px */
+
+  --font-1: var(--scale-3);   /* 12px */
+  --font-2: var(--scale-4);   /* 16px */
+  --font-3: var(--scale-5);   /* 24px */
+  --font-4: var(--scale-6);   /* 32px */
+  --font-5: var(--scale-7);   /* 48px */
+  --font-6: var(--scale-8);   /* 64px */
+
+  --size-1: var(--scale-5);   /* 24px */
+  --size-2: var(--scale-6);   /* 32px */
+  --size-3: var(--scale-7);   /* 48px */
+  --size-4: var(--scale-8);   /* 64px */
+  --size-5: var(--scale-9);   /* 96px */
+  --size-6: var(--scale-10);  /* 128px */
+  --size-7: var(--scale-11);  /* 192px */
+  --size-8: var(--scale-12);  /* 256px */
+  --size-9: var(--scale-13);  /* 384px */
+  --size-10: var(--scale-14); /* 512px */
+
+  /* Font family tokens — Tailwind stacks (reading = serif, ui = sans, code = mono) */
+  --font-reading: ui-serif, Georgia, Cambria, "Times New Roman", Times, serif;
+  --font-ui: ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  --font-code: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+
+  /* Font weight & style tokens */
+  --font-light: 300;
+  --font-bold: 700;
+  --font-italic: italic;
+}
