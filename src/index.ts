@@ -11,15 +11,13 @@ type Scores = [Score, Score];
 
 type Round = { index: number, roles: Roles, moves: Moves, scores: Scores };
 
-const isMove = (x: unknown): x is Move => 
-    typeof x === 'string' &&
-    (x === 'r' || x === 'p' || x === 's');
+const isMove = (x: unknown): x is Move => typeof x === 'string' && (x === 'r' || x === 'p' || x === 's');
 
-const $ = <T extends HTMLElement>(selector: string, context: ParentNode = document): T | null => 
-    context.querySelector<T>(selector);
+const $ = <T extends HTMLElement>(selector: string, root: ParentNode = document): T | null =>
+    root.querySelector<T>(selector);
 
-const $must = <T extends HTMLElement>(selector: string, context: ParentNode = document): T => {
-    const raw = $<T>(selector);
+const $must = <T extends HTMLElement>(selector: string, root: ParentNode = document): T => {
+    const raw = $<T>(selector, root);
     if(!raw) {
         throw new Error(`a must selector not found: ${selector}`);
     }
