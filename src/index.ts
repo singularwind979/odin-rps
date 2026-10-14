@@ -1,4 +1,15 @@
+type Index = number;
+
+type Role = 'human' | 'computer';
+type Roles = [Role, Role];
+
 type Move = 'r' | 'p' | 's';
+type Moves = [Move, Move];
+
+type Score = number;
+type Scores = [Score, Score];
+
+type Round = { index: number, roles: Roles, moves: Moves, scores: Scores };
 
 const isMove = (x: unknown): x is Move => 
     typeof x === 'string' &&
