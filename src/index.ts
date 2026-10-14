@@ -11,3 +11,10 @@ const $must = <T extends HTMLElement>(selector: string, context: ParentNode = do
     }
     return raw;
 };
+
+const computer = $must('#computer');
+const human = $must('#human');
+const computerScore = $must('#computer .score');
+const humanScore = $must('#human .score');
+const computerRps = $must('#computer .rps');
+const humanRps = $must('#human .rps');
