@@ -3,8 +3,8 @@ import { initRound, isGameOver, playRound } from '../src/core.js';
 import { getMoveByClick, getMoveByRandom } from '../src/input.js';
 
 vi.mock('../src/input.js', () => ({
-    getMoveByClick: vi.fn(async () => 'p' as const),
-    getMoveByRandom: vi.fn(() => 's' as const),
+    getMoveByClick: vi.fn(async () => 'paper' as const),
+    getMoveByRandom: vi.fn(() => 'scissors' as const),
 }));
 
 beforeEach(() => {
@@ -16,8 +16,8 @@ describe('initRound', () => {
     it('starts at round 0, no scores, not over', () => {
         expect(initRound()).toEqual({
             index: 0,
-            roles: ['human', 'computer'],
-            moves: ['r', 'r'],
+            roles: ['player', 'cpu'],
+            moves: ['rock', 'rock'],
             scores: [0, 0],
         });
         expect(isGameOver(initRound().scores)).toBe(false);
@@ -25,10 +25,10 @@ describe('initRound', () => {
 });
 
 describe('playRound', () => {
-    // Mocked moves: human 'p' vs computer 's' — scissors cut paper,
-    // so the computer wins every played round.
+    // Mocked moves: player 'paper' vs cpu 'scissors' — scissors cut paper,
+    // so the cpu wins every played round.
 
-    it('asks the input layer for one human and one computer move', async () => {
+    it('asks the input layer for one player and one cpu move', async () => {
         await playRound(initRound());
         expect(getMoveByClick).toHaveBeenCalledTimes(1);
         expect(getMoveByRandom).toHaveBeenCalledTimes(1);
@@ -40,7 +40,7 @@ describe('playRound', () => {
         expect(r.index).toBe(0);
         expect(next.index).toBe(1);
         expect(next.roles).toEqual(r.roles);
-        expect(next.moves).toEqual(['p', 's']);
+        expect(next.moves).toEqual(['paper', 'scissors']);
     });
 
     it('scores the moves it just played', async () => {

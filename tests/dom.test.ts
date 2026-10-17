@@ -12,11 +12,11 @@ describe('$must', () => {
     });
 
     it('supports scoped lookups through a custom root', () => {
-        const human = $must<HTMLElement>('[data-belong="human"]');
-        const score = $must<HTMLElement>('.score', human);
-        const computerScore = $must<HTMLElement>('.score', $must<HTMLElement>('[data-belong="computer"]'));
-        expect(human.contains(score)).toBe(true);
-        expect(computerScore).not.toBe(score);
+        const player = $must<HTMLElement>('[data-panel="player"]');
+        const score = $must<HTMLElement>('.score', player);
+        const cpuScore = $must<HTMLElement>('.score', $must<HTMLElement>('[data-panel="cpu"]'));
+        expect(player.contains(score)).toBe(true);
+        expect(cpuScore).not.toBe(score);
     });
 
     it('throws with the selector in the message when nothing matches', () => {
@@ -24,23 +24,23 @@ describe('$must', () => {
     });
 
     it('does not throw when a scoped lookup misses only outside its root', () => {
-        const human = $must<HTMLElement>('[data-belong="human"]');
-        expect(() => $must('[data-belong="computer"]', human)).toThrow(/not found/);
+        const player = $must<HTMLElement>('[data-panel="player"]');
+        expect(() => $must('[data-panel="cpu"]', player)).toThrow(/not found/);
     });
 });
 
 describe('waitEventTarget', () => {
     it('resolves with the event target once the event fires', async () => {
-        const button = $must<HTMLButtonElement>('[data-belong="human"] button[data-move="p"]');
+        const button = $must<HTMLButtonElement>('[data-panel="player"] button[data-move="paper"]');
         const waiting = waitEventTarget(button, 'click');
         button.click();
         const target = await waiting;
         expect(target).toBe(button);
-        expect((target as HTMLElement).dataset.move).toBe('p');
+        expect((target as HTMLElement).dataset.move).toBe('paper');
     });
 
     it('listens only once (listener removed after first event)', async () => {
-        const button = $must<HTMLButtonElement>('[data-belong="human"] button[data-move="r"]');
+        const button = $must<HTMLButtonElement>('[data-panel="player"] button[data-move="rock"]');
         const removeSpy = vi.spyOn(button, 'removeEventListener');
         const first = waitEventTarget(button, 'click');
         button.click();

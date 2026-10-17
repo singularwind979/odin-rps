@@ -7,26 +7,26 @@ describe('getMoveByPrompt', () => {
     afterEach(() => vi.unstubAllGlobals());
 
     it('accepts a valid move', () => {
-        vi.stubGlobal('prompt', vi.fn(() => 's'));
-        expect(getMoveByPrompt()).toBe('s');
+        vi.stubGlobal('prompt', vi.fn(() => 'scissors'));
+        expect(getMoveByPrompt()).toBe('scissors');
     });
 
-    it('takes the first character and lowercases it', () => {
-        vi.stubGlobal('prompt', vi.fn(() => 'ROCK'));
-        expect(getMoveByPrompt()).toBe('r');
+    it('accepts a move in any case, ignoring surrounding space', () => {
+        vi.stubGlobal('prompt', vi.fn(() => '  ROCK '));
+        expect(getMoveByPrompt()).toBe('rock');
     });
 
     it('re-prompts on invalid input until a valid move arrives', () => {
-        const prompt = vi.fn(() => ['q', '', undefined, 'p'][prompt.mock.calls.length - 1]);
+        const prompt = vi.fn(() => ['q', '', undefined, 'paper'][prompt.mock.calls.length - 1]);
         vi.stubGlobal('prompt', prompt);
-        expect(getMoveByPrompt()).toBe('p');
+        expect(getMoveByPrompt()).toBe('paper');
         expect(prompt).toHaveBeenCalledTimes(4);
     });
 
     it('re-prompts when the dialog is dismissed', () => {
-        const prompt = vi.fn(() => [null, 'r'][prompt.mock.calls.length - 1]);
+        const prompt = vi.fn(() => [null, 'rock'][prompt.mock.calls.length - 1]);
         vi.stubGlobal('prompt', prompt);
-        expect(getMoveByPrompt()).toBe('r');
+        expect(getMoveByPrompt()).toBe('rock');
         expect(prompt).toHaveBeenCalledTimes(2);
     });
 });
@@ -34,13 +34,13 @@ describe('getMoveByPrompt', () => {
 describe('getMoveByRandom', () => {
     afterEach(() => vi.restoreAllMocks());
 
-    it('maps the random draw onto r/p/s', () => {
+    it('maps the random draw onto rock/paper/scissors', () => {
         const random = vi.spyOn(Math, 'random').mockReturnValue(0);
-        expect(getMoveByRandom()).toBe('r');
+        expect(getMoveByRandom()).toBe('rock');
         random.mockReturnValue(0.5);
-        expect(getMoveByRandom()).toBe('p');
+        expect(getMoveByRandom()).toBe('paper');
         random.mockReturnValue(0.999999);
-        expect(getMoveByRandom()).toBe('s');
+        expect(getMoveByRandom()).toBe('scissors');
     });
 
     it('always returns a valid move over many draws', () => {
@@ -53,19 +53,19 @@ describe('getMoveByRandom', () => {
 describe('getMoveByClick', () => {
     beforeEach(() => mountGame());
 
-    it('resolves with the move of the clicked human button', async () => {
+    it('resolves with the move of the clicked player button', async () => {
         const waiting = getMoveByClick();
         document
-            .querySelector<HTMLButtonElement>('[data-belong="human"] button[data-move="s"]')!
+            .querySelector<HTMLButtonElement>('[data-panel="player"] button[data-move="scissors"]')!
             .click();
-        expect(await waiting).toBe('s');
+        expect(await waiting).toBe('scissors');
     });
 
-    it('resolves with "r" when the rock button is clicked', async () => {
+    it('resolves with "rock" when the rock button is clicked', async () => {
         const waiting = getMoveByClick();
         document
-            .querySelector<HTMLButtonElement>('[data-belong="human"] button[data-move="r"]')!
+            .querySelector<HTMLButtonElement>('[data-panel="player"] button[data-move="rock"]')!
             .click();
-        expect(await waiting).toBe('r');
+        expect(await waiting).toBe('rock');
     });
 });

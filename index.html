@@ -13,15 +13,15 @@
 
     <div class="flexbox-row single-line main-center cross-center g-4 p-x-4">
 
-        <div data-belong="computer" class="flexbox-col flex-auto cross-center g-3 p-3 size-x-8 b-2 r-4 sh-2 bg-sky b-sky">
+        <div data-panel="cpu" class="flexbox-col flex-auto cross-center g-3 p-3 size-x-8 b-2 r-4 sh-2 bg-sky b-sky">
             <div class="flexbox-col flex-rigid cross-start g-1 p-2 b-1 r-2 bg-white b-neutral-2">
-                <div>Role: <span class="font-bold">Computer</span></div>
+                <div>Role: <span class="font-bold">CPU</span></div>
                 <div>Score: <span class="score font-code font-bold font-sky-8">0</span></div>
             </div>
             <ul class="flexbox-row self-stretch multi-line g-2">
-                <li class="flexbox-row flex-auto"><button data-move="r" class="flex-auto p-1 size-x-4 size-y-4 b-1 r-pill sh-1 font-2 font-bold bg-sky-5 b-sky-5 font-white">R</button></li>
-                <li class="flexbox-row flex-auto"><button data-move="p" class="flex-auto p-1 size-x-4 size-y-4 b-1 r-pill sh-1 font-2 font-bold bg-sky-5 b-sky-5 font-white">P</button></li>
-                <li class="flexbox-row flex-auto"><button data-move="s" class="flex-auto p-1 size-x-4 size-y-4 b-1 r-pill sh-1 font-2 font-bold bg-sky-5 b-sky-5 font-white">S</button></li>
+                <li class="flexbox-row flex-auto"><button data-move="rock" class="flex-auto p-1 size-x-4 size-y-4 b-1 r-pill sh-1 font-2 font-bold bg-sky-5 b-sky-5 font-white">R</button></li>
+                <li class="flexbox-row flex-auto"><button data-move="paper" class="flex-auto p-1 size-x-4 size-y-4 b-1 r-pill sh-1 font-2 font-bold bg-sky-5 b-sky-5 font-white">P</button></li>
+                <li class="flexbox-row flex-auto"><button data-move="scissors" class="flex-auto p-1 size-x-4 size-y-4 b-1 r-pill sh-1 font-2 font-bold bg-sky-5 b-sky-5 font-white">S</button></li>
             </ul>
         </div>
 
@@ -30,19 +30,21 @@
             <div class="font-5 font-bold font-italic font-neutral-5">VS</div>
         </div>
 
-        <div data-belong="human" class="flexbox-col flex-auto cross-center g-3 p-3 size-x-8 b-2 r-4 sh-2 bg-rose b-rose">
+        <div data-panel="player" class="flexbox-col flex-auto cross-center g-3 p-3 size-x-8 b-2 r-4 sh-2 bg-rose b-rose">
             <div class="flexbox-col flex-rigid cross-start g-1 p-2 b-1 r-2 bg-white b-neutral-2">
-                <div>Role: <span class="font-bold">Human</span></div>
+                <div>Role: <span class="font-bold">Player</span></div>
                 <div>Score: <span class="score font-code font-bold font-rose-8">0</span></div>
             </div>
             <ul class="flexbox-row self-stretch multi-line g-2">
-                <li class="flexbox-row flex-auto"><button data-move="r" class="flex-auto p-1 size-x-4 size-y-4 b-1 r-pill sh-1 font-2 font-bold bg-rose-5 b-rose-5 font-white">R</button></li>
-                <li class="flexbox-row flex-auto"><button data-move="p" class="flex-auto p-1 size-x-4 size-y-4 b-1 r-pill sh-1 font-2 font-bold bg-rose-5 b-rose-5 font-white">P</button></li>
-                <li class="flexbox-row flex-auto"><button data-move="s" class="flex-auto p-1 size-x-4 size-y-4 b-1 r-pill sh-1 font-2 font-bold bg-rose-5 b-rose-5 font-white">S</button></li>
+                <li class="flexbox-row flex-auto"><button data-move="rock" class="flex-auto p-1 size-x-4 size-y-4 b-1 r-pill sh-1 font-2 font-bold bg-rose-5 b-rose-5 font-white">R</button></li>
+                <li class="flexbox-row flex-auto"><button data-move="paper" class="flex-auto p-1 size-x-4 size-y-4 b-1 r-pill sh-1 font-2 font-bold bg-rose-5 b-rose-5 font-white">P</button></li>
+                <li class="flexbox-row flex-auto"><button data-move="scissors" class="flex-auto p-1 size-x-4 size-y-4 b-1 r-pill sh-1 font-2 font-bold bg-rose-5 b-rose-5 font-white">S</button></li>
             </ul>
         </div>
 
     </div>
-    
+
+    <div data-panel="statement" class="text-center font-code font-2 font-neutral-6">Pick a move to start round 1.</div>
+
 </body>
 </html>
