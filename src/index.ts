@@ -1,6 +1,6 @@
 import type { Round } from "./types.js";
 import { initRound, playRound, isGameOver } from "./core.js";
-import { renderRound } from "./output.js";
+import { renderResult, renderRound } from "./output.js";
 
 let round: Round = initRound();
 
@@ -9,6 +9,7 @@ const playGame = async () => {
         round = await playRound(round);
         renderRound(round);
     }
+    renderResult(round);
 };
 
 playGame();

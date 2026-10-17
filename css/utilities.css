@@ -397,6 +397,9 @@
 .vport-y-start { position: fixed; top: var(--none); }
 .vport-y-end { position: fixed; bottom: var(--none); }
 
+/* layer — above all in-flow content (result popup overlay) */
+.z-top { z-index: 1000; }
+
 .scrol-x { position: sticky; left: var(--none); right: var(--none); }
 .scrol-y { position: sticky; top: var(--none); bottom: var(--none); }
 .scrol-x-start { position: sticky; left: var(--none); }

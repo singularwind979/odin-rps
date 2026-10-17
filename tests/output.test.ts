@@ -1,5 +1,5 @@
 import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest';
-import { renderRound } from '../src/output.js';
+import { renderResult, renderRound } from '../src/output.js';
 import type { Round } from '../src/types.js';
 import { mountGame } from './gameFixture.js';
 
@@ -49,5 +49,58 @@ describe('renderRound', () => {
     it('throws when the DOM is missing a required node', () => {
         document.body.innerHTML = '';
         expect(() => renderRound(makeRound())).toThrow(/a must selector not found/);
+    });
+});
+
+describe('renderResult', () => {
+    const layer = (): HTMLElement | null =>
+        document.querySelector('[data-panel="result"]');
+    const popup = (): HTMLElement | null =>
+        document.querySelector('[data-panel="result"] .result');
+
+    afterEach(() => layer()?.remove());
+
+    it('creates the popup only when the result renders', () => {
+        expect(popup()).toBeNull();
+        renderResult(makeRound({ scores: [3, 1] }));
+        expect(popup()).not.toBeNull();
+    });
+
+    it('shows a win message when the player leads', () => {
+        renderResult(makeRound({ scores: [3, 1] }));
+        expect(popup()!.textContent).toBe('You win!');
+    });
+
+    it('shows a lose message when the computer leads', () => {
+        renderResult(makeRound({ scores: [0, 3] }));
+        expect(popup()!.textContent).toBe('You lose!');
+    });
+
+    it('shows a tie message when the scores are level', () => {
+        renderResult(makeRound({ scores: [2, 2] }));
+        expect(popup()!.textContent).toBe("It's a tie!");
+    });
+
+    it('lifts the popup above the page with a fixed, centred layer', () => {
+        renderResult(makeRound({ scores: [3, 1] }));
+        const classes = layer()!.classList;
+        expect(classes).toContain('z-top');
+        expect(classes).toContain('vport-x');
+        expect(classes).toContain('vport-y');
+        expect(classes).toContain('main-center');
+        expect(classes).toContain('cross-center');
+    });
+
+    it('removes the popup from the DOM when clicked away', () => {
+        renderResult(makeRound({ scores: [3, 1] }));
+        layer()!.click();
+        expect(popup()).toBeNull();
+    });
+
+    it('replaces any previous popup instead of stacking', () => {
+        renderResult(makeRound({ scores: [3, 1] }));
+        renderResult(makeRound({ scores: [0, 3] }));
+        expect(document.querySelectorAll('[data-panel="result"]').length).toBe(1);
+        expect(popup()!.textContent).toBe('You lose!');
     });
 });
