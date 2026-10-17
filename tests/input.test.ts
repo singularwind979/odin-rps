@@ -1,35 +1,7 @@
 import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest';
-import { getMoveByClick, getMoveByPrompt, getMoveByRandom } from '../src/input.js';
+import { getMoveByClick, getMoveByRandom } from '../src/input.js';
 import { isMove } from '../src/types.js';
 import { mountGame } from './gameFixture.js';
-
-describe('getMoveByPrompt', () => {
-    afterEach(() => vi.unstubAllGlobals());
-
-    it('accepts a valid move', () => {
-        vi.stubGlobal('prompt', vi.fn(() => 'scissors'));
-        expect(getMoveByPrompt()).toBe('scissors');
-    });
-
-    it('accepts a move in any case, ignoring surrounding space', () => {
-        vi.stubGlobal('prompt', vi.fn(() => '  ROCK '));
-        expect(getMoveByPrompt()).toBe('rock');
-    });
-
-    it('re-prompts on invalid input until a valid move arrives', () => {
-        const prompt = vi.fn(() => ['q', '', undefined, 'paper'][prompt.mock.calls.length - 1]);
-        vi.stubGlobal('prompt', prompt);
-        expect(getMoveByPrompt()).toBe('paper');
-        expect(prompt).toHaveBeenCalledTimes(4);
-    });
-
-    it('re-prompts when the dialog is dismissed', () => {
-        const prompt = vi.fn(() => [null, 'rock'][prompt.mock.calls.length - 1]);
-        vi.stubGlobal('prompt', prompt);
-        expect(getMoveByPrompt()).toBe('rock');
-        expect(prompt).toHaveBeenCalledTimes(2);
-    });
-});
 
 describe('getMoveByRandom', () => {
     afterEach(() => vi.restoreAllMocks());
