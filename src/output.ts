@@ -1,5 +1,7 @@
 import { $must } from "./dom.js";
 import { beats } from "./core.js";
+import type { Outcome } from "./i18n.js";
+import { dict } from "./i18n.js";
 import type { MovePair, Role, Score, ScorePair, Round } from "./types.js";
 
 const renderIndex = (index: number): void => {
@@ -12,13 +14,13 @@ const renderScore = (score: Score, role: Role): void => {
 
 const renderStatement = (moves: MovePair): void => {
     const [you, cpu] = moves;
-    const verdict = beats[you] === cpu
-        ? `${you} beats ${cpu}, you win this round!`
+    const outcome: Outcome = beats[you] === cpu
+        ? 'win'
         : beats[cpu] === you
-        ? `${cpu} beats ${you}, you lose this round!`
-        : `Both played ${you}, you tie this round.`;
+        ? 'lose'
+        : 'tie';
     $must('[data-panel="statement"]').textContent =
-        `Your move is ${you}, computer move is ${cpu}. ${verdict}`;
+        dict().statement(you, cpu, outcome);
 };
 
 export const renderRound = (round: Round): void => {
@@ -30,12 +32,12 @@ export const renderRound = (round: Round): void => {
 
 const resultText = (scores: ScorePair): string => {
     const [you, cpu] = scores;
-    const verdict = you > cpu
-        ? 'You win!'
+    const outcome: Outcome = you > cpu
+        ? 'win'
         : you < cpu
-        ? 'You lose!'
-        : "It's a tie!";
-    return `${verdict}`;
+        ? 'lose'
+        : 'tie';
+    return dict().result[outcome];
 };
 
 export const renderResult = (finalRound: Round): void => {

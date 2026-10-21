@@ -9,14 +9,18 @@
 </head>
 <body class="flexbox-col g-5 font-ui bg-neutral-2 font-neutral">
 
-    <h1 class="text-center font-5 font-bold">Rock Paper Scissors</h1>
+    <h1 data-i18n="title" class="text-center font-5 font-bold">Rock Paper Scissors</h1>
+
+    <div class="flexbox-row main-center p-x-4">
+        <button data-i18n="toggle" class="p-1 p-x-2 b-1 r-pill sh-1 font-1 font-bold bg-white b-neutral-2">中文</button>
+    </div>
 
     <div class="flexbox-row single-line main-center cross-center g-4 p-x-4">
 
         <div data-panel="cpu" class="flexbox-col flex-auto cross-center g-3 p-3 size-x-8 b-2 r-4 sh-2 bg-sky b-sky">
             <div class="flexbox-col flex-rigid cross-start g-1 p-2 b-1 r-2 bg-white b-neutral-2">
-                <div>Role: <span class="font-bold">CPU</span></div>
-                <div>Score: <span class="score font-code font-bold font-sky-8">0</span></div>
+                <div><span data-i18n="role">Role:</span> <span data-i18n="role-cpu" class="font-bold">CPU</span></div>
+                <div><span data-i18n="score">Score:</span> <span class="score font-code font-bold font-sky-8">0</span></div>
             </div>
             <ul class="flexbox-row self-stretch multi-line g-2">
                 <li class="flexbox-row flex-auto"><button data-move="rock" class="flex-auto p-1 size-x-4 size-y-4 b-1 r-pill sh-1 font-2 font-bold bg-sky-5 b-sky-5 font-white">✊</button></li>
@@ -26,14 +30,14 @@
         </div>
 
         <div class="flexbox-col flex-rigid">
-            <div class="font-2 font-bold font-neutral-5">Round:<span class="index">0</span></div>
+            <div class="font-2 font-bold font-neutral-5"><span data-i18n="round">Round:</span><span class="index">0</span></div>
             <div class="font-5 font-bold font-italic font-neutral-5">VS</div>
         </div>
 
         <div data-panel="player" class="flexbox-col flex-auto cross-center g-3 p-3 size-x-8 b-2 r-4 sh-2 bg-rose b-rose">
             <div class="flexbox-col flex-rigid cross-start g-1 p-2 b-1 r-2 bg-white b-neutral-2">
-                <div>Role: <span class="font-bold">Player</span></div>
-                <div>Score: <span class="score font-code font-bold font-rose-8">0</span></div>
+                <div><span data-i18n="role">Role:</span> <span data-i18n="role-player" class="font-bold">Player</span></div>
+                <div><span data-i18n="score">Score:</span> <span class="score font-code font-bold font-rose-8">0</span></div>
             </div>
             <ul class="flexbox-row self-stretch multi-line g-2">
                 <li class="flexbox-row flex-auto"><button data-move="rock" class="flex-auto p-1 size-x-4 size-y-4 b-1 r-pill sh-1 font-2 font-bold bg-rose-5 b-rose-5 font-white">✊</button></li>
@@ -44,7 +48,7 @@
 
     </div>
 
-    <div data-panel="statement" class="text-center font-code font-2 font-neutral-6">Pick a move to start round 1.</div>
+    <div data-panel="statement" data-i18n="pick-move" class="text-center font-code font-2 font-neutral-6">Pick a move to start round 1.</div>
 
 </body>
 </html>
