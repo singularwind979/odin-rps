@@ -1,18 +1,15 @@
-export type Role = 'player' | 'cpu';
-export type Roles = [Role, Role];
+export const ROLES = ['player', 'cpu'] as const;
+export const isRole = (x: unknown): x is Role => ROLES.includes(x as Role);
+export type Role = typeof ROLES[number];
+export type RolePair = [Role, Role];
 
-export type Move = 'rock' | 'paper' | 'scissors';
-export type Moves = [Move, Move];
+export const MOVES = ['rock', 'paper', 'scissors'] as const;
+export const isMove = (x: unknown): x is Move => MOVES.includes(x as Move);
+export type Move = typeof MOVES[number];
+export type MovePair = [Move, Move];
 
 export type Score = number;
-export type Scores = [Score, Score];
+export const isScore = (x: unknown): x is Score => typeof x ==='number' && Number.isInteger(x) && x >= 0;
+export type ScorePair = [Score, Score];
 
-export type Round = { index: number; roles: Roles; moves: Moves; scores: Scores; };
-
-export const isRole = (x: unknown): x is Role => typeof x === 'string' && (x === 'player' || x === 'cpu');
-
-export const isMove = (x: unknown): x is Move => typeof x === 'string' && (x === 'rock' || x === 'paper' || x === 'scissors');
-
-export const ROLES: Role[] = ['player', 'cpu'];
-
-export const MOVES: Move[] = ['rock', 'paper', 'scissors'];
+export type Round = { index: number; roles: RolePair; moves: MovePair; scores: ScorePair; };

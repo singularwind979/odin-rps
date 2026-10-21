@@ -1,4 +1,4 @@
-import type { Move, Moves, Round, Score, Scores } from "./types.js";
+import type { Move, MovePair, Round, Score, ScorePair } from "./types.js";
 import { getMoveByClick, getMoveByRandom } from "./input.js";
 
 export const beats: Record<Move, Move> = {
@@ -7,7 +7,7 @@ export const beats: Record<Move, Move> = {
     'paper': 'rock'
 };
 
-export const isGameOver = (scores: Scores, winScore: Score = 3): boolean => 
+export const isGameOver = (scores: ScorePair, winScore: Score = 3): boolean => 
     scores[0] >= winScore || scores[1] >= winScore;
 
 export const initRound = (): Round => ({
@@ -18,11 +18,11 @@ export const initRound = (): Round => ({
 });
 
 export const playRound = async (r: Round): Promise<Round> => {
-    const newMoves: Moves = [
+    const newMoves: MovePair = [
         await getMoveByClick(), 
         getMoveByRandom()
     ];
-    const newScores: Scores = [
+    const newScores: ScorePair = [
         beats[newMoves[0]] === newMoves[1] ? r.scores[0] + 1 : r.scores[0],
         beats[newMoves[1]] === newMoves[0] ? r.scores[1] + 1 : r.scores[1]
     ];

@@ -1,6 +1,6 @@
 import { $must } from "./dom.js";
 import { beats } from "./core.js";
-import type { Moves, Role, Score, Scores, Round } from "./types.js";
+import type { MovePair, Role, Score, ScorePair, Round } from "./types.js";
 
 const renderIndex = (index: number): void => {
     $must('.index').textContent = String(index);
@@ -10,7 +10,7 @@ const renderScore = (score: Score, role: Role): void => {
     $must(`[data-panel="${role}"] .score`).textContent = String(score);
 };
 
-const renderStatement = (moves: Moves): void => {
+const renderStatement = (moves: MovePair): void => {
     const [you, cpu] = moves;
     const verdict = beats[you] === cpu
         ? `${you} beats ${cpu}, you win this round!`
@@ -28,7 +28,7 @@ export const renderRound = (round: Round): void => {
     renderScore(round.scores[1], round.roles[1]);
 };
 
-const resultText = (scores: Scores): string => {
+const resultText = (scores: ScorePair): string => {
     const [you, cpu] = scores;
     const verdict = you > cpu
         ? 'You win!'
