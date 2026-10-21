@@ -1,5 +1,6 @@
 import { $must } from "./dom.js";
 import { beats } from "./core.js";
+import { dict } from "./i18n.js";
 const renderIndex = (index) => {
     $must('.index').textContent = String(index);
 };
@@ -8,13 +9,13 @@ const renderScore = (score, role) => {
 };
 const renderStatement = (moves) => {
     const [you, cpu] = moves;
-    const verdict = beats[you] === cpu
-        ? `${you} beats ${cpu}, you win this round!`
+    const outcome = beats[you] === cpu
+        ? 'win'
         : beats[cpu] === you
-            ? `${cpu} beats ${you}, you lose this round!`
-            : `Both played ${you}, you tie this round.`;
+            ? 'lose'
+            : 'tie';
     $must('[data-panel="statement"]').textContent =
-        `Your move is ${you}, computer move is ${cpu}. ${verdict}`;
+        dict().statement(you, cpu, outcome);
 };
 export const renderRound = (round) => {
     renderIndex(round.index);
@@ -24,12 +25,12 @@ export const renderRound = (round) => {
 };
 const resultText = (scores) => {
     const [you, cpu] = scores;
-    const verdict = you > cpu
-        ? 'You win!'
+    const outcome = you > cpu
+        ? 'win'
         : you < cpu
-            ? 'You lose!'
-            : "It's a tie!";
-    return `${verdict}`;
+            ? 'lose'
+            : 'tie';
+    return dict().result[outcome];
 };
 export const renderResult = (finalRound) => {
     document.querySelector('[data-panel="result"]')?.remove();
