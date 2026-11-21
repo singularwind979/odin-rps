@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<!-- Add appropriate language for your site -->
+<html lang="en">
+<head>
+  <!-- `utf-8` is a character set including many universal characters -->
+  <meta charset="utf-8">
+
+  <!-- `viewport` ensures that items scale correctly on mobile devices -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- `title` sets the page title, which appears in the browser tab and search results.
+   `author` sets your name and `description` provides a brief overview.
+   Used by search engines. -->
+  <title>Your Page Title</title>
+  <meta name="author"      content="Your Name">
+  <meta name="description" content="Description">
+
+  <!-- `og` stands for Open Graph, a protocol for sharing content on social media.
+   Used to create a share card. -->
+  <meta property="og:type"        content="website">
+  <meta property="og:site_name"   content="Your Site Name">
+  <meta property="og:title"       content="Your Page Title">
+  <meta property="og:description" content="Your Page Description">
+  <meta property="og:url"         content="Your Page absolute URL">
+  <meta property="og:image"       content="Your Page Image absolute URL">
+
+  <!-- CSS and JS entry points -->
+  <link rel="stylesheet" href="css/index.css">
+  <script type="module" src="dist/index.js"></script>
+</head>
+
+<body>
+  <!-- Header: site identity and primary navigation -->
+  <header>
+    <nav>
+      <ul class="nav">
+        <li><a>Home</a></li>
+        <li><a>About</a></li>
+        <li><a>Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Main: the page's primary content landmark -->
+  <main>
+    <!-- Intro: the single <h1> for the page lives here -->
+    <section>
+      <h1>Your page heading here!</h1>
+    </section>
+
+    <!-- A themed block. -->
+    <section>
+      <h2>Section title</h2>
+      <p>Replace with your content.</p>
+    </section>
+  </main>
+
+  <!-- Footer: site-level information -->
+  <footer>
+    <p>&copy; <time datetime="2026">2026</time> Singularwind</p>
+  </footer>
+</body>
+</html>

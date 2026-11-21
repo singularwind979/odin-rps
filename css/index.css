@@ -1,0 +1,16 @@
+/* Index — entry point of the CSS framework:
+  declares the layer order,
+  imports the three layers,
+  keeps the layout-debug outline */
+
+/* priority (low → high):
+  tokens < elements < utilities */
+@layer tokens, elements, utilities;
+
+@import url('tokens.css')       layer(tokens);
+@import url('elements.css')     layer(elements);
+@import url('utilities.css')    layer(utilities);
+
+/* unlayered and !important on purpose:
+  the layout-debug outline must beat every other rule */
+* { outline: 1px solid red !important; }

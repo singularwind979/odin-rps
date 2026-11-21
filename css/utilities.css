@@ -1,0 +1,835 @@
+/* ===== Color ===== */
+
+/* background — .bg-<color> reads the default level, .bg-<color>-<1..9> explicit */
+.bg-neutral { background-color: var(--bg-neutral); }
+.bg-neutral-1 { background-color: var(--color-neutral-1); }
+.bg-neutral-2 { background-color: var(--color-neutral-2); }
+.bg-neutral-3 { background-color: var(--color-neutral-3); }
+.bg-neutral-4 { background-color: var(--color-neutral-4); }
+.bg-neutral-5 { background-color: var(--color-neutral-5); }
+.bg-neutral-6 { background-color: var(--color-neutral-6); }
+.bg-neutral-7 { background-color: var(--color-neutral-7); }
+.bg-neutral-8 { background-color: var(--color-neutral-8); }
+.bg-neutral-9 { background-color: var(--color-neutral-9); }
+.bg-rose { background-color: var(--bg-rose); }
+.bg-rose-1 { background-color: var(--color-rose-1); }
+.bg-rose-2 { background-color: var(--color-rose-2); }
+.bg-rose-3 { background-color: var(--color-rose-3); }
+.bg-rose-4 { background-color: var(--color-rose-4); }
+.bg-rose-5 { background-color: var(--color-rose-5); }
+.bg-rose-6 { background-color: var(--color-rose-6); }
+.bg-rose-7 { background-color: var(--color-rose-7); }
+.bg-rose-8 { background-color: var(--color-rose-8); }
+.bg-rose-9 { background-color: var(--color-rose-9); }
+.bg-amber { background-color: var(--bg-amber); }
+.bg-amber-1 { background-color: var(--color-amber-1); }
+.bg-amber-2 { background-color: var(--color-amber-2); }
+.bg-amber-3 { background-color: var(--color-amber-3); }
+.bg-amber-4 { background-color: var(--color-amber-4); }
+.bg-amber-5 { background-color: var(--color-amber-5); }
+.bg-amber-6 { background-color: var(--color-amber-6); }
+.bg-amber-7 { background-color: var(--color-amber-7); }
+.bg-amber-8 { background-color: var(--color-amber-8); }
+.bg-amber-9 { background-color: var(--color-amber-9); }
+.bg-emerald { background-color: var(--bg-emerald); }
+.bg-emerald-1 { background-color: var(--color-emerald-1); }
+.bg-emerald-2 { background-color: var(--color-emerald-2); }
+.bg-emerald-3 { background-color: var(--color-emerald-3); }
+.bg-emerald-4 { background-color: var(--color-emerald-4); }
+.bg-emerald-5 { background-color: var(--color-emerald-5); }
+.bg-emerald-6 { background-color: var(--color-emerald-6); }
+.bg-emerald-7 { background-color: var(--color-emerald-7); }
+.bg-emerald-8 { background-color: var(--color-emerald-8); }
+.bg-emerald-9 { background-color: var(--color-emerald-9); }
+.bg-sky { background-color: var(--bg-sky); }
+.bg-sky-1 { background-color: var(--color-sky-1); }
+.bg-sky-2 { background-color: var(--color-sky-2); }
+.bg-sky-3 { background-color: var(--color-sky-3); }
+.bg-sky-4 { background-color: var(--color-sky-4); }
+.bg-sky-5 { background-color: var(--color-sky-5); }
+.bg-sky-6 { background-color: var(--color-sky-6); }
+.bg-sky-7 { background-color: var(--color-sky-7); }
+.bg-sky-8 { background-color: var(--color-sky-8); }
+.bg-sky-9 { background-color: var(--color-sky-9); }
+.bg-violet { background-color: var(--bg-violet); }
+.bg-violet-1 { background-color: var(--color-violet-1); }
+.bg-violet-2 { background-color: var(--color-violet-2); }
+.bg-violet-3 { background-color: var(--color-violet-3); }
+.bg-violet-4 { background-color: var(--color-violet-4); }
+.bg-violet-5 { background-color: var(--color-violet-5); }
+.bg-violet-6 { background-color: var(--color-violet-6); }
+.bg-violet-7 { background-color: var(--color-violet-7); }
+.bg-violet-8 { background-color: var(--color-violet-8); }
+.bg-violet-9 { background-color: var(--color-violet-9); }
+.bg-pink { background-color: var(--bg-pink); }
+.bg-pink-1 { background-color: var(--color-pink-1); }
+.bg-pink-2 { background-color: var(--color-pink-2); }
+.bg-pink-3 { background-color: var(--color-pink-3); }
+.bg-pink-4 { background-color: var(--color-pink-4); }
+.bg-pink-5 { background-color: var(--color-pink-5); }
+.bg-pink-6 { background-color: var(--color-pink-6); }
+.bg-pink-7 { background-color: var(--color-pink-7); }
+.bg-pink-8 { background-color: var(--color-pink-8); }
+.bg-pink-9 { background-color: var(--color-pink-9); }
+.bg-white { background-color: var(--bg-white); }
+.bg-black { background-color: var(--bg-black); }
+
+/* text — .font-<color> reads the default level, .font-<color>-<1..9> explicit */
+.font-neutral { color: var(--font-neutral); }
+.font-neutral-1 { color: var(--color-neutral-1); }
+.font-neutral-2 { color: var(--color-neutral-2); }
+.font-neutral-3 { color: var(--color-neutral-3); }
+.font-neutral-4 { color: var(--color-neutral-4); }
+.font-neutral-5 { color: var(--color-neutral-5); }
+.font-neutral-6 { color: var(--color-neutral-6); }
+.font-neutral-7 { color: var(--color-neutral-7); }
+.font-neutral-8 { color: var(--color-neutral-8); }
+.font-neutral-9 { color: var(--color-neutral-9); }
+.font-rose { color: var(--font-rose); }
+.font-rose-1 { color: var(--color-rose-1); }
+.font-rose-2 { color: var(--color-rose-2); }
+.font-rose-3 { color: var(--color-rose-3); }
+.font-rose-4 { color: var(--color-rose-4); }
+.font-rose-5 { color: var(--color-rose-5); }
+.font-rose-6 { color: var(--color-rose-6); }
+.font-rose-7 { color: var(--color-rose-7); }
+.font-rose-8 { color: var(--color-rose-8); }
+.font-rose-9 { color: var(--color-rose-9); }
+.font-amber { color: var(--font-amber); }
+.font-amber-1 { color: var(--color-amber-1); }
+.font-amber-2 { color: var(--color-amber-2); }
+.font-amber-3 { color: var(--color-amber-3); }
+.font-amber-4 { color: var(--color-amber-4); }
+.font-amber-5 { color: var(--color-amber-5); }
+.font-amber-6 { color: var(--color-amber-6); }
+.font-amber-7 { color: var(--color-amber-7); }
+.font-amber-8 { color: var(--color-amber-8); }
+.font-amber-9 { color: var(--color-amber-9); }
+.font-emerald { color: var(--font-emerald); }
+.font-emerald-1 { color: var(--color-emerald-1); }
+.font-emerald-2 { color: var(--color-emerald-2); }
+.font-emerald-3 { color: var(--color-emerald-3); }
+.font-emerald-4 { color: var(--color-emerald-4); }
+.font-emerald-5 { color: var(--color-emerald-5); }
+.font-emerald-6 { color: var(--color-emerald-6); }
+.font-emerald-7 { color: var(--color-emerald-7); }
+.font-emerald-8 { color: var(--color-emerald-8); }
+.font-emerald-9 { color: var(--color-emerald-9); }
+.font-sky { color: var(--font-sky); }
+.font-sky-1 { color: var(--color-sky-1); }
+.font-sky-2 { color: var(--color-sky-2); }
+.font-sky-3 { color: var(--color-sky-3); }
+.font-sky-4 { color: var(--color-sky-4); }
+.font-sky-5 { color: var(--color-sky-5); }
+.font-sky-6 { color: var(--color-sky-6); }
+.font-sky-7 { color: var(--color-sky-7); }
+.font-sky-8 { color: var(--color-sky-8); }
+.font-sky-9 { color: var(--color-sky-9); }
+.font-violet { color: var(--font-violet); }
+.font-violet-1 { color: var(--color-violet-1); }
+.font-violet-2 { color: var(--color-violet-2); }
+.font-violet-3 { color: var(--color-violet-3); }
+.font-violet-4 { color: var(--color-violet-4); }
+.font-violet-5 { color: var(--color-violet-5); }
+.font-violet-6 { color: var(--color-violet-6); }
+.font-violet-7 { color: var(--color-violet-7); }
+.font-violet-8 { color: var(--color-violet-8); }
+.font-violet-9 { color: var(--color-violet-9); }
+.font-pink { color: var(--font-pink); }
+.font-pink-1 { color: var(--color-pink-1); }
+.font-pink-2 { color: var(--color-pink-2); }
+.font-pink-3 { color: var(--color-pink-3); }
+.font-pink-4 { color: var(--color-pink-4); }
+.font-pink-5 { color: var(--color-pink-5); }
+.font-pink-6 { color: var(--color-pink-6); }
+.font-pink-7 { color: var(--color-pink-7); }
+.font-pink-8 { color: var(--color-pink-8); }
+.font-pink-9 { color: var(--color-pink-9); }
+.font-white { color: var(--font-white); }
+.font-black { color: var(--font-black); }
+
+/* border — .b-<color> reads the default level, .b-<color>-<1..9> explicit */
+.b-neutral { border-color: var(--b-neutral); }
+.b-neutral-1 { border-color: var(--color-neutral-1); }
+.b-neutral-2 { border-color: var(--color-neutral-2); }
+.b-neutral-3 { border-color: var(--color-neutral-3); }
+.b-neutral-4 { border-color: var(--color-neutral-4); }
+.b-neutral-5 { border-color: var(--color-neutral-5); }
+.b-neutral-6 { border-color: var(--color-neutral-6); }
+.b-neutral-7 { border-color: var(--color-neutral-7); }
+.b-neutral-8 { border-color: var(--color-neutral-8); }
+.b-neutral-9 { border-color: var(--color-neutral-9); }
+.b-rose { border-color: var(--b-rose); }
+.b-rose-1 { border-color: var(--color-rose-1); }
+.b-rose-2 { border-color: var(--color-rose-2); }
+.b-rose-3 { border-color: var(--color-rose-3); }
+.b-rose-4 { border-color: var(--color-rose-4); }
+.b-rose-5 { border-color: var(--color-rose-5); }
+.b-rose-6 { border-color: var(--color-rose-6); }
+.b-rose-7 { border-color: var(--color-rose-7); }
+.b-rose-8 { border-color: var(--color-rose-8); }
+.b-rose-9 { border-color: var(--color-rose-9); }
+.b-amber { border-color: var(--b-amber); }
+.b-amber-1 { border-color: var(--color-amber-1); }
+.b-amber-2 { border-color: var(--color-amber-2); }
+.b-amber-3 { border-color: var(--color-amber-3); }
+.b-amber-4 { border-color: var(--color-amber-4); }
+.b-amber-5 { border-color: var(--color-amber-5); }
+.b-amber-6 { border-color: var(--color-amber-6); }
+.b-amber-7 { border-color: var(--color-amber-7); }
+.b-amber-8 { border-color: var(--color-amber-8); }
+.b-amber-9 { border-color: var(--color-amber-9); }
+.b-emerald { border-color: var(--b-emerald); }
+.b-emerald-1 { border-color: var(--color-emerald-1); }
+.b-emerald-2 { border-color: var(--color-emerald-2); }
+.b-emerald-3 { border-color: var(--color-emerald-3); }
+.b-emerald-4 { border-color: var(--color-emerald-4); }
+.b-emerald-5 { border-color: var(--color-emerald-5); }
+.b-emerald-6 { border-color: var(--color-emerald-6); }
+.b-emerald-7 { border-color: var(--color-emerald-7); }
+.b-emerald-8 { border-color: var(--color-emerald-8); }
+.b-emerald-9 { border-color: var(--color-emerald-9); }
+.b-sky { border-color: var(--b-sky); }
+.b-sky-1 { border-color: var(--color-sky-1); }
+.b-sky-2 { border-color: var(--color-sky-2); }
+.b-sky-3 { border-color: var(--color-sky-3); }
+.b-sky-4 { border-color: var(--color-sky-4); }
+.b-sky-5 { border-color: var(--color-sky-5); }
+.b-sky-6 { border-color: var(--color-sky-6); }
+.b-sky-7 { border-color: var(--color-sky-7); }
+.b-sky-8 { border-color: var(--color-sky-8); }
+.b-sky-9 { border-color: var(--color-sky-9); }
+.b-violet { border-color: var(--b-violet); }
+.b-violet-1 { border-color: var(--color-violet-1); }
+.b-violet-2 { border-color: var(--color-violet-2); }
+.b-violet-3 { border-color: var(--color-violet-3); }
+.b-violet-4 { border-color: var(--color-violet-4); }
+.b-violet-5 { border-color: var(--color-violet-5); }
+.b-violet-6 { border-color: var(--color-violet-6); }
+.b-violet-7 { border-color: var(--color-violet-7); }
+.b-violet-8 { border-color: var(--color-violet-8); }
+.b-violet-9 { border-color: var(--color-violet-9); }
+.b-pink { border-color: var(--b-pink); }
+.b-pink-1 { border-color: var(--color-pink-1); }
+.b-pink-2 { border-color: var(--color-pink-2); }
+.b-pink-3 { border-color: var(--color-pink-3); }
+.b-pink-4 { border-color: var(--color-pink-4); }
+.b-pink-5 { border-color: var(--color-pink-5); }
+.b-pink-6 { border-color: var(--color-pink-6); }
+.b-pink-7 { border-color: var(--color-pink-7); }
+.b-pink-8 { border-color: var(--color-pink-8); }
+.b-pink-9 { border-color: var(--color-pink-9); }
+
+/* ===== Typo ===== */
+
+/* family */
+.font-reading { font-family: var(--font-reading); }
+.font-ui { font-family: var(--font-ui); }
+.font-code { font-family: var(--font-code); }
+
+/* size — each step carries its own leading and tracking, so one class sets the
+   whole type style instead of three that must agree. Leading and tracking have
+   no standalone utilities: a value without a size to hang it on isn't a type
+   decision, so picking a step is the only way to reach them */
+.font-1 { font-size: var(--font-1); line-height: var(--leading-1); letter-spacing: var(--tracking-1); }
+.font-2 { font-size: var(--font-2); line-height: var(--leading-2); letter-spacing: var(--tracking-2); }
+.font-3 { font-size: var(--font-3); line-height: var(--leading-3); letter-spacing: var(--tracking-3); }
+.font-4 { font-size: var(--font-4); line-height: var(--leading-4); letter-spacing: var(--tracking-4); }
+.font-5 { font-size: var(--font-5); line-height: var(--leading-5); letter-spacing: var(--tracking-5); }
+.font-6 { font-size: var(--font-6); line-height: var(--leading-6); letter-spacing: var(--tracking-6); }
+
+/* style */
+.font-italic { font-style: var(--font-italic); }
+.font-light { font-weight: var(--font-light); }
+.font-bold { font-weight: var(--font-bold); }
+
+/* align — bare, unlike case and line: it is typed often enough that the extra
+   segment costs more than it explains, and no other property values collide */
+.text-start { text-align: start; }
+.text-end { text-align: end; }
+.text-center { text-align: center; }
+
+/* case */
+.text-case-upper { text-transform: uppercase; }
+.text-case-lower { text-transform: lowercase; }
+.text-case-title { text-transform: capitalize; }
+.text-case-normal { text-transform: none; }
+
+/* line — decoration drawn under or through the text. This is the way back from
+   elements.css stripping every classed anchor, since the utilities layer wins */
+.text-line-none { text-decoration-line: none; }
+.text-line-under { text-decoration-line: underline; }
+.text-line-through { text-decoration-line: line-through; }
+
+/* ===== Box ===== */
+
+/* size — the step a box asks for, not a guarantee of its width: width is capped
+   at the container with the same guard as min-size and fixed-size, so a step
+   wider than its parent resolves to the parent, while height holds its step
+   either way. Expect a rectangle, not a square, in a tight parent */
+.size-1 { width: min(var(--size-1), var(--quarter-4)); height: var(--size-1); }
+.size-2 { width: min(var(--size-2), var(--quarter-4)); height: var(--size-2); }
+.size-3 { width: min(var(--size-3), var(--quarter-4)); height: var(--size-3); }
+.size-4 { width: min(var(--size-4), var(--quarter-4)); height: var(--size-4); }
+.size-5 { width: min(var(--size-5), var(--quarter-4)); height: var(--size-5); }
+.size-6 { width: min(var(--size-6), var(--quarter-4)); height: var(--size-6); }
+.size-7 { width: min(var(--size-7), var(--quarter-4)); height: var(--size-7); }
+.size-8 { width: min(var(--size-8), var(--quarter-4)); height: var(--size-8); }
+.size-9 { width: min(var(--size-9), var(--quarter-4)); height: var(--size-9); }
+.size-10 { width: min(var(--size-10), var(--quarter-4)); height: var(--size-10); }
+
+.size-x-1 { width: min(var(--size-1), var(--quarter-4)); }
+.size-x-2 { width: min(var(--size-2), var(--quarter-4)); }
+.size-x-3 { width: min(var(--size-3), var(--quarter-4)); }
+.size-x-4 { width: min(var(--size-4), var(--quarter-4)); }
+.size-x-5 { width: min(var(--size-5), var(--quarter-4)); }
+.size-x-6 { width: min(var(--size-6), var(--quarter-4)); }
+.size-x-7 { width: min(var(--size-7), var(--quarter-4)); }
+.size-x-8 { width: min(var(--size-8), var(--quarter-4)); }
+.size-x-9 { width: min(var(--size-9), var(--quarter-4)); }
+.size-x-10 { width: min(var(--size-10), var(--quarter-4)); }
+
+.size-y-1 { height: var(--size-1); }
+.size-y-2 { height: var(--size-2); }
+.size-y-3 { height: var(--size-3); }
+.size-y-4 { height: var(--size-4); }
+.size-y-5 { height: var(--size-5); }
+.size-y-6 { height: var(--size-6); }
+.size-y-7 { height: var(--size-7); }
+.size-y-8 { height: var(--size-8); }
+.size-y-9 { height: var(--size-9); }
+.size-y-10 { height: var(--size-10); }
+
+/* min-size — the floor a box will not shrink below, without fixing its ceiling:
+   the card pattern pairs .min-size-x-* with .flex.flex-multi-line + .flexweight-1,
+   so a card keeps at least this width yet still grows to fill its line, and the
+   strip reflows by wrapping once the floor no longer fits. A grid auto-fit track
+   cannot do this: its repeat count must be definite before the items are known,
+   so a child's min-width can never set the track floor. min-width is capped at
+   the container like fixed-size, but nothing here constrains max — floor alone,
+   not a rigid box */
+.min-size-1 { min-width: min(var(--size-1), var(--quarter-4)); min-height: var(--size-1); }
+.min-size-2 { min-width: min(var(--size-2), var(--quarter-4)); min-height: var(--size-2); }
+.min-size-3 { min-width: min(var(--size-3), var(--quarter-4)); min-height: var(--size-3); }
+.min-size-4 { min-width: min(var(--size-4), var(--quarter-4)); min-height: var(--size-4); }
+.min-size-5 { min-width: min(var(--size-5), var(--quarter-4)); min-height: var(--size-5); }
+.min-size-6 { min-width: min(var(--size-6), var(--quarter-4)); min-height: var(--size-6); }
+.min-size-7 { min-width: min(var(--size-7), var(--quarter-4)); min-height: var(--size-7); }
+.min-size-8 { min-width: min(var(--size-8), var(--quarter-4)); min-height: var(--size-8); }
+.min-size-9 { min-width: min(var(--size-9), var(--quarter-4)); min-height: var(--size-9); }
+.min-size-10 { min-width: min(var(--size-10), var(--quarter-4)); min-height: var(--size-10); }
+
+.min-size-x-1 { min-width: min(var(--size-1), var(--quarter-4)); }
+.min-size-x-2 { min-width: min(var(--size-2), var(--quarter-4)); }
+.min-size-x-3 { min-width: min(var(--size-3), var(--quarter-4)); }
+.min-size-x-4 { min-width: min(var(--size-4), var(--quarter-4)); }
+.min-size-x-5 { min-width: min(var(--size-5), var(--quarter-4)); }
+.min-size-x-6 { min-width: min(var(--size-6), var(--quarter-4)); }
+.min-size-x-7 { min-width: min(var(--size-7), var(--quarter-4)); }
+.min-size-x-8 { min-width: min(var(--size-8), var(--quarter-4)); }
+.min-size-x-9 { min-width: min(var(--size-9), var(--quarter-4)); }
+.min-size-x-10 { min-width: min(var(--size-10), var(--quarter-4)); }
+
+.min-size-y-1 { min-height: var(--size-1); }
+.min-size-y-2 { min-height: var(--size-2); }
+.min-size-y-3 { min-height: var(--size-3); }
+.min-size-y-4 { min-height: var(--size-4); }
+.min-size-y-5 { min-height: var(--size-5); }
+.min-size-y-6 { min-height: var(--size-6); }
+.min-size-y-7 { min-height: var(--size-7); }
+.min-size-y-8 { min-height: var(--size-8); }
+.min-size-y-9 { min-height: var(--size-9); }
+.min-size-y-10 { min-height: var(--size-10); }
+
+/* max-size — the ceiling a box will not grow past, without fixing its floor: the
+   mirror of min-size. Unlike min-size and fixed-size it needs no container guard:
+   a max only lowers a box, so a step wider than its container still resolves to
+   the container instead of forcing overflow. Pair floor and ceiling when both
+   ends are known; use fixed-size when the box must be rigid */
+.max-size-1 { max-width: var(--size-1); max-height: var(--size-1); }
+.max-size-2 { max-width: var(--size-2); max-height: var(--size-2); }
+.max-size-3 { max-width: var(--size-3); max-height: var(--size-3); }
+.max-size-4 { max-width: var(--size-4); max-height: var(--size-4); }
+.max-size-5 { max-width: var(--size-5); max-height: var(--size-5); }
+.max-size-6 { max-width: var(--size-6); max-height: var(--size-6); }
+.max-size-7 { max-width: var(--size-7); max-height: var(--size-7); }
+.max-size-8 { max-width: var(--size-8); max-height: var(--size-8); }
+.max-size-9 { max-width: var(--size-9); max-height: var(--size-9); }
+.max-size-10 { max-width: var(--size-10); max-height: var(--size-10); }
+
+.max-size-x-1 { max-width: var(--size-1); }
+.max-size-x-2 { max-width: var(--size-2); }
+.max-size-x-3 { max-width: var(--size-3); }
+.max-size-x-4 { max-width: var(--size-4); }
+.max-size-x-5 { max-width: var(--size-5); }
+.max-size-x-6 { max-width: var(--size-6); }
+.max-size-x-7 { max-width: var(--size-7); }
+.max-size-x-8 { max-width: var(--size-8); }
+.max-size-x-9 { max-width: var(--size-9); }
+.max-size-x-10 { max-width: var(--size-10); }
+
+.max-size-y-1 { max-height: var(--size-1); }
+.max-size-y-2 { max-height: var(--size-2); }
+.max-size-y-3 { max-height: var(--size-3); }
+.max-size-y-4 { max-height: var(--size-4); }
+.max-size-y-5 { max-height: var(--size-5); }
+.max-size-y-6 { max-height: var(--size-6); }
+.max-size-y-7 { max-height: var(--size-7); }
+.max-size-y-8 { max-height: var(--size-8); }
+.max-size-y-9 { max-height: var(--size-9); }
+.max-size-y-10 { max-height: var(--size-10); }
+
+/* fixed — a box that refuses to be stretched or shrunk by its parent, which is
+   why it declares min rather than width. min-width outranks both width and
+   max-width, so it is capped at the container too: fixed means not-flexible,
+   never wider-than-what-holds-it */
+.fixed-size-1 { min-width: min(var(--size-1), var(--quarter-4)); max-width: var(--size-1); min-height: var(--size-1); max-height: var(--size-1); }
+.fixed-size-2 { min-width: min(var(--size-2), var(--quarter-4)); max-width: var(--size-2); min-height: var(--size-2); max-height: var(--size-2); }
+.fixed-size-3 { min-width: min(var(--size-3), var(--quarter-4)); max-width: var(--size-3); min-height: var(--size-3); max-height: var(--size-3); }
+.fixed-size-4 { min-width: min(var(--size-4), var(--quarter-4)); max-width: var(--size-4); min-height: var(--size-4); max-height: var(--size-4); }
+.fixed-size-5 { min-width: min(var(--size-5), var(--quarter-4)); max-width: var(--size-5); min-height: var(--size-5); max-height: var(--size-5); }
+.fixed-size-6 { min-width: min(var(--size-6), var(--quarter-4)); max-width: var(--size-6); min-height: var(--size-6); max-height: var(--size-6); }
+.fixed-size-7 { min-width: min(var(--size-7), var(--quarter-4)); max-width: var(--size-7); min-height: var(--size-7); max-height: var(--size-7); }
+.fixed-size-8 { min-width: min(var(--size-8), var(--quarter-4)); max-width: var(--size-8); min-height: var(--size-8); max-height: var(--size-8); }
+.fixed-size-9 { min-width: min(var(--size-9), var(--quarter-4)); max-width: var(--size-9); min-height: var(--size-9); max-height: var(--size-9); }
+.fixed-size-10 { min-width: min(var(--size-10), var(--quarter-4)); max-width: var(--size-10); min-height: var(--size-10); max-height: var(--size-10); }
+
+.fixed-size-x-1 { min-width: min(var(--size-1), var(--quarter-4)); max-width: var(--size-1); }
+.fixed-size-x-2 { min-width: min(var(--size-2), var(--quarter-4)); max-width: var(--size-2); }
+.fixed-size-x-3 { min-width: min(var(--size-3), var(--quarter-4)); max-width: var(--size-3); }
+.fixed-size-x-4 { min-width: min(var(--size-4), var(--quarter-4)); max-width: var(--size-4); }
+.fixed-size-x-5 { min-width: min(var(--size-5), var(--quarter-4)); max-width: var(--size-5); }
+.fixed-size-x-6 { min-width: min(var(--size-6), var(--quarter-4)); max-width: var(--size-6); }
+.fixed-size-x-7 { min-width: min(var(--size-7), var(--quarter-4)); max-width: var(--size-7); }
+.fixed-size-x-8 { min-width: min(var(--size-8), var(--quarter-4)); max-width: var(--size-8); }
+.fixed-size-x-9 { min-width: min(var(--size-9), var(--quarter-4)); max-width: var(--size-9); }
+.fixed-size-x-10 { min-width: min(var(--size-10), var(--quarter-4)); max-width: var(--size-10); }
+
+.fixed-size-y-1 { min-height: var(--size-1); max-height: var(--size-1); }
+.fixed-size-y-2 { min-height: var(--size-2); max-height: var(--size-2); }
+.fixed-size-y-3 { min-height: var(--size-3); max-height: var(--size-3); }
+.fixed-size-y-4 { min-height: var(--size-4); max-height: var(--size-4); }
+.fixed-size-y-5 { min-height: var(--size-5); max-height: var(--size-5); }
+.fixed-size-y-6 { min-height: var(--size-6); max-height: var(--size-6); }
+.fixed-size-y-7 { min-height: var(--size-7); max-height: var(--size-7); }
+.fixed-size-y-8 { min-height: var(--size-8); max-height: var(--size-8); }
+.fixed-size-y-9 { min-height: var(--size-9); max-height: var(--size-9); }
+.fixed-size-y-10 { min-height: var(--size-10); max-height: var(--size-10); }
+
+/* spacing */
+.m-1 { margin: var(--space-1); }
+.m-2 { margin: var(--space-2); }
+.m-3 { margin: var(--space-3); }
+.m-4 { margin: var(--space-4); }
+.m-5 { margin: var(--space-5); }
+.m-6 { margin: var(--space-6); }
+
+.m-x-1 { margin-left: var(--space-1); margin-right: var(--space-1); }
+.m-x-2 { margin-left: var(--space-2); margin-right: var(--space-2); }
+.m-x-3 { margin-left: var(--space-3); margin-right: var(--space-3); }
+.m-x-4 { margin-left: var(--space-4); margin-right: var(--space-4); }
+.m-x-5 { margin-left: var(--space-5); margin-right: var(--space-5); }
+.m-x-6 { margin-left: var(--space-6); margin-right: var(--space-6); }
+
+.m-y-1 { margin-top: var(--space-1); margin-bottom: var(--space-1); }
+.m-y-2 { margin-top: var(--space-2); margin-bottom: var(--space-2); }
+.m-y-3 { margin-top: var(--space-3); margin-bottom: var(--space-3); }
+.m-y-4 { margin-top: var(--space-4); margin-bottom: var(--space-4); }
+.m-y-5 { margin-top: var(--space-5); margin-bottom: var(--space-5); }
+.m-y-6 { margin-top: var(--space-6); margin-bottom: var(--space-6); }
+
+/* margin — single edges (logical: start = left in LTR) */
+.m-x-start-1 { margin-left: var(--space-1); }
+.m-x-start-2 { margin-left: var(--space-2); }
+.m-x-start-3 { margin-left: var(--space-3); }
+.m-x-start-4 { margin-left: var(--space-4); }
+.m-x-start-5 { margin-left: var(--space-5); }
+.m-x-start-6 { margin-left: var(--space-6); }
+.m-x-end-1 { margin-right: var(--space-1); }
+.m-x-end-2 { margin-right: var(--space-2); }
+.m-x-end-3 { margin-right: var(--space-3); }
+.m-x-end-4 { margin-right: var(--space-4); }
+.m-x-end-5 { margin-right: var(--space-5); }
+.m-x-end-6 { margin-right: var(--space-6); }
+.m-y-start-1 { margin-top: var(--space-1); }
+.m-y-start-2 { margin-top: var(--space-2); }
+.m-y-start-3 { margin-top: var(--space-3); }
+.m-y-start-4 { margin-top: var(--space-4); }
+.m-y-start-5 { margin-top: var(--space-5); }
+.m-y-start-6 { margin-top: var(--space-6); }
+.m-y-end-1 { margin-bottom: var(--space-1); }
+.m-y-end-2 { margin-bottom: var(--space-2); }
+.m-y-end-3 { margin-bottom: var(--space-3); }
+.m-y-end-4 { margin-bottom: var(--space-4); }
+.m-y-end-5 { margin-bottom: var(--space-5); }
+.m-y-end-6 { margin-bottom: var(--space-6); }
+
+.p-1 { padding: var(--space-1); }
+.p-2 { padding: var(--space-2); }
+.p-3 { padding: var(--space-3); }
+.p-4 { padding: var(--space-4); }
+.p-5 { padding: var(--space-5); }
+.p-6 { padding: var(--space-6); }
+
+.p-x-1 { padding-left: var(--space-1); padding-right: var(--space-1); }
+.p-x-2 { padding-left: var(--space-2); padding-right: var(--space-2); }
+.p-x-3 { padding-left: var(--space-3); padding-right: var(--space-3); }
+.p-x-4 { padding-left: var(--space-4); padding-right: var(--space-4); }
+.p-x-5 { padding-left: var(--space-5); padding-right: var(--space-5); }
+.p-x-6 { padding-left: var(--space-6); padding-right: var(--space-6); }
+
+.p-y-1 { padding-top: var(--space-1); padding-bottom: var(--space-1); }
+.p-y-2 { padding-top: var(--space-2); padding-bottom: var(--space-2); }
+.p-y-3 { padding-top: var(--space-3); padding-bottom: var(--space-3); }
+.p-y-4 { padding-top: var(--space-4); padding-bottom: var(--space-4); }
+.p-y-5 { padding-top: var(--space-5); padding-bottom: var(--space-5); }
+.p-y-6 { padding-top: var(--space-6); padding-bottom: var(--space-6); }
+
+/* padding — single edges (logical: start = left in LTR) */
+.p-x-start-1 { padding-left: var(--space-1); }
+.p-x-start-2 { padding-left: var(--space-2); }
+.p-x-start-3 { padding-left: var(--space-3); }
+.p-x-start-4 { padding-left: var(--space-4); }
+.p-x-start-5 { padding-left: var(--space-5); }
+.p-x-start-6 { padding-left: var(--space-6); }
+.p-x-end-1 { padding-right: var(--space-1); }
+.p-x-end-2 { padding-right: var(--space-2); }
+.p-x-end-3 { padding-right: var(--space-3); }
+.p-x-end-4 { padding-right: var(--space-4); }
+.p-x-end-5 { padding-right: var(--space-5); }
+.p-x-end-6 { padding-right: var(--space-6); }
+.p-y-start-1 { padding-top: var(--space-1); }
+.p-y-start-2 { padding-top: var(--space-2); }
+.p-y-start-3 { padding-top: var(--space-3); }
+.p-y-start-4 { padding-top: var(--space-4); }
+.p-y-start-5 { padding-top: var(--space-5); }
+.p-y-start-6 { padding-top: var(--space-6); }
+.p-y-end-1 { padding-bottom: var(--space-1); }
+.p-y-end-2 { padding-bottom: var(--space-2); }
+.p-y-end-3 { padding-bottom: var(--space-3); }
+.p-y-end-4 { padding-bottom: var(--space-4); }
+.p-y-end-5 { padding-bottom: var(--space-5); }
+.p-y-end-6 { padding-bottom: var(--space-6); }
+
+/* edge */
+.b-1 { border-width: var(--line-1); }
+.b-2 { border-width: var(--line-2); }
+.b-3 { border-width: var(--line-3); }
+.b-4 { border-width: var(--line-4); }
+
+.b-x-1 { border-left-width: var(--line-1); border-right-width: var(--line-1); }
+.b-x-2 { border-left-width: var(--line-2); border-right-width: var(--line-2); }
+.b-x-3 { border-left-width: var(--line-3); border-right-width: var(--line-3); }
+.b-x-4 { border-left-width: var(--line-4); border-right-width: var(--line-4); }
+
+.b-y-1 { border-top-width: var(--line-1); border-bottom-width: var(--line-1); }
+.b-y-2 { border-top-width: var(--line-2); border-bottom-width: var(--line-2); }
+.b-y-3 { border-top-width: var(--line-3); border-bottom-width: var(--line-3); }
+.b-y-4 { border-top-width: var(--line-4); border-bottom-width: var(--line-4); }
+
+/* border — single edges (logical: start = left in LTR) */
+.b-x-start-1 { border-left-width: var(--line-1); }
+.b-x-start-2 { border-left-width: var(--line-2); }
+.b-x-start-3 { border-left-width: var(--line-3); }
+.b-x-start-4 { border-left-width: var(--line-4); }
+.b-x-end-1 { border-right-width: var(--line-1); }
+.b-x-end-2 { border-right-width: var(--line-2); }
+.b-x-end-3 { border-right-width: var(--line-3); }
+.b-x-end-4 { border-right-width: var(--line-4); }
+.b-y-start-1 { border-top-width: var(--line-1); }
+.b-y-start-2 { border-top-width: var(--line-2); }
+.b-y-start-3 { border-top-width: var(--line-3); }
+.b-y-start-4 { border-top-width: var(--line-4); }
+.b-y-end-1 { border-bottom-width: var(--line-1); }
+.b-y-end-2 { border-bottom-width: var(--line-2); }
+.b-y-end-3 { border-bottom-width: var(--line-3); }
+.b-y-end-4 { border-bottom-width: var(--line-4); }
+
+/* style — elements.css gives every element border-style: solid, so nothing else can
+   draw anything but a solid line from the utilities layer. No .b-solid: border-style
+   does not inherit, so the universal rule already covers each element on its own and
+   a dashed parent cannot leak into children. No .b-none: width already defaults to 0 */
+.b-dashed { border-style: dashed; }
+.b-dotted { border-style: dotted; }
+.b-double { border-style: double; }
+
+.r-1 { border-radius: var(--corner-1); }
+.r-2 { border-radius: var(--corner-2); }
+.r-3 { border-radius: var(--corner-3); }
+.r-4 { border-radius: var(--corner-4); }
+.r-5 { border-radius: var(--corner-5); }
+.r-6 { border-radius: var(--corner-6); }
+.r-circle { border-radius: var(--quarter-2); }
+.r-pill { border-radius: var(--inf); }
+
+/* shadow — elevation as one step; see tokens.css for why it is not split by axis */
+.sh-1 { box-shadow: var(--shadow-1); }
+.sh-2 { box-shadow: var(--shadow-2); }
+.sh-3 { box-shadow: var(--shadow-3); }
+.sh-4 { box-shadow: var(--shadow-4); }
+
+/* opacity — steps between 0 and 1 only */
+.op-1 { opacity: var(--op-1); }
+.op-2 { opacity: var(--op-2); }
+.op-3 { opacity: var(--op-3); }
+
+/* ===== Layout ===== */
+
+/* position — port = the containing block; viewport / scrollport are spec terms.
+   relative acts as a port (a positioning context for descendants); absolute is
+   positioned to the nearest port; fixed / sticky pin to the viewport / scrollport */
+.as-port { position: relative; }
+.to-port { position: absolute; }
+.to-viewport { position: fixed; }
+.to-scrollport { position: sticky; }
+
+/* inset — pin an edge to 0; compose with a position above. start / end are
+   logical (LTR start = left), so the same classes stay correct under RTL */
+.inset-0 { inset: var(--none); }
+.inset-x-0 { left: var(--none); right: var(--none); }
+.inset-y-0 { top: var(--none); bottom: var(--none); }
+.inset-x-start-0 { left: var(--none); }
+.inset-x-end-0 { right: var(--none); }
+.inset-y-start-0 { top: var(--none); }
+.inset-y-end-0 { bottom: var(--none); }
+
+/* flex — container. .flex marks the display; direction and wrap are the only
+   container-level args and are independent of it. row/col = main axis;
+   single/multi-line = wrap. .flex alone is a row axis, so a column needs
+   .flex-col too */
+.flex { display: flex; }
+.flex-row { flex-direction: row; }
+.flex-col { flex-direction: column; }
+.flex-single-line { flex-wrap: nowrap; }
+.flex-multi-line { flex-wrap: wrap; }
+
+/* flex — item. flexweight is the only item-level arg: how the cell's item
+   grows/shrinks. grow = shrink = n, basis auto, so weight-0 is rigid */
+.flexweight-0 { flex: 0 0 auto; }
+.flexweight-1 { flex: 1 1 auto; }
+.flexweight-2 { flex: 2 2 auto; }
+
+/* grid — container. .grid marks the display; cols/rows set the tracks and are
+   independent of it. cols/rows-N: N equal fluid tracks, N runs 1..12 (min 0 so
+   they never overflow the cap). No auto-fit variant: the count must be definite
+   before items are known, so a child's min-width cannot set the floor — use
+   .flex.flex-multi-line + .flexweight-* + .min-size-* for a reflowing strip */
+.grid { display: grid; }
+.grid-cols-1 { grid-template-columns: repeat(1, minmax(0, 1fr)); }
+.grid-cols-2 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+.grid-cols-3 { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+.grid-cols-4 { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+.grid-cols-5 { grid-template-columns: repeat(5, minmax(0, 1fr)); }
+.grid-cols-6 { grid-template-columns: repeat(6, minmax(0, 1fr)); }
+.grid-cols-7 { grid-template-columns: repeat(7, minmax(0, 1fr)); }
+.grid-cols-8 { grid-template-columns: repeat(8, minmax(0, 1fr)); }
+.grid-cols-9 { grid-template-columns: repeat(9, minmax(0, 1fr)); }
+.grid-cols-10 { grid-template-columns: repeat(10, minmax(0, 1fr)); }
+.grid-cols-11 { grid-template-columns: repeat(11, minmax(0, 1fr)); }
+.grid-cols-12 { grid-template-columns: repeat(12, minmax(0, 1fr)); }
+.grid-rows-1 { grid-template-rows: repeat(1, minmax(0, 1fr)); }
+.grid-rows-2 { grid-template-rows: repeat(2, minmax(0, 1fr)); }
+.grid-rows-3 { grid-template-rows: repeat(3, minmax(0, 1fr)); }
+.grid-rows-4 { grid-template-rows: repeat(4, minmax(0, 1fr)); }
+.grid-rows-5 { grid-template-rows: repeat(5, minmax(0, 1fr)); }
+.grid-rows-6 { grid-template-rows: repeat(6, minmax(0, 1fr)); }
+.grid-rows-7 { grid-template-rows: repeat(7, minmax(0, 1fr)); }
+.grid-rows-8 { grid-template-rows: repeat(8, minmax(0, 1fr)); }
+.grid-rows-9 { grid-template-rows: repeat(9, minmax(0, 1fr)); }
+.grid-rows-10 { grid-template-rows: repeat(10, minmax(0, 1fr)); }
+.grid-rows-11 { grid-template-rows: repeat(11, minmax(0, 1fr)); }
+.grid-rows-12 { grid-template-rows: repeat(12, minmax(0, 1fr)); }
+
+/* grid — item placement. place an item by explicit lines (S/E); spans when E >
+   S+1. Lines run 1..13 across the 12-track grid, but S/E are capped at 12 here,
+   the same max as the track count, so placement and container agree */
+.gridline-row-1-2 { grid-row: 1 / 2; }
+.gridline-row-1-3 { grid-row: 1 / 3; }
+.gridline-row-1-4 { grid-row: 1 / 4; }
+.gridline-row-1-5 { grid-row: 1 / 5; }
+.gridline-row-1-6 { grid-row: 1 / 6; }
+.gridline-row-1-7 { grid-row: 1 / 7; }
+.gridline-row-1-8 { grid-row: 1 / 8; }
+.gridline-row-1-9 { grid-row: 1 / 9; }
+.gridline-row-1-10 { grid-row: 1 / 10; }
+.gridline-row-1-11 { grid-row: 1 / 11; }
+.gridline-row-1-12 { grid-row: 1 / 12; }
+.gridline-row-2-3 { grid-row: 2 / 3; }
+.gridline-row-2-4 { grid-row: 2 / 4; }
+.gridline-row-2-5 { grid-row: 2 / 5; }
+.gridline-row-2-6 { grid-row: 2 / 6; }
+.gridline-row-2-7 { grid-row: 2 / 7; }
+.gridline-row-2-8 { grid-row: 2 / 8; }
+.gridline-row-2-9 { grid-row: 2 / 9; }
+.gridline-row-2-10 { grid-row: 2 / 10; }
+.gridline-row-2-11 { grid-row: 2 / 11; }
+.gridline-row-2-12 { grid-row: 2 / 12; }
+.gridline-row-3-4 { grid-row: 3 / 4; }
+.gridline-row-3-5 { grid-row: 3 / 5; }
+.gridline-row-3-6 { grid-row: 3 / 6; }
+.gridline-row-3-7 { grid-row: 3 / 7; }
+.gridline-row-3-8 { grid-row: 3 / 8; }
+.gridline-row-3-9 { grid-row: 3 / 9; }
+.gridline-row-3-10 { grid-row: 3 / 10; }
+.gridline-row-3-11 { grid-row: 3 / 11; }
+.gridline-row-3-12 { grid-row: 3 / 12; }
+.gridline-row-4-5 { grid-row: 4 / 5; }
+.gridline-row-4-6 { grid-row: 4 / 6; }
+.gridline-row-4-7 { grid-row: 4 / 7; }
+.gridline-row-4-8 { grid-row: 4 / 8; }
+.gridline-row-4-9 { grid-row: 4 / 9; }
+.gridline-row-4-10 { grid-row: 4 / 10; }
+.gridline-row-4-11 { grid-row: 4 / 11; }
+.gridline-row-4-12 { grid-row: 4 / 12; }
+.gridline-row-5-6 { grid-row: 5 / 6; }
+.gridline-row-5-7 { grid-row: 5 / 7; }
+.gridline-row-5-8 { grid-row: 5 / 8; }
+.gridline-row-5-9 { grid-row: 5 / 9; }
+.gridline-row-5-10 { grid-row: 5 / 10; }
+.gridline-row-5-11 { grid-row: 5 / 11; }
+.gridline-row-5-12 { grid-row: 5 / 12; }
+.gridline-row-6-7 { grid-row: 6 / 7; }
+.gridline-row-6-8 { grid-row: 6 / 8; }
+.gridline-row-6-9 { grid-row: 6 / 9; }
+.gridline-row-6-10 { grid-row: 6 / 10; }
+.gridline-row-6-11 { grid-row: 6 / 11; }
+.gridline-row-6-12 { grid-row: 6 / 12; }
+.gridline-row-7-8 { grid-row: 7 / 8; }
+.gridline-row-7-9 { grid-row: 7 / 9; }
+.gridline-row-7-10 { grid-row: 7 / 10; }
+.gridline-row-7-11 { grid-row: 7 / 11; }
+.gridline-row-7-12 { grid-row: 7 / 12; }
+.gridline-row-8-9 { grid-row: 8 / 9; }
+.gridline-row-8-10 { grid-row: 8 / 10; }
+.gridline-row-8-11 { grid-row: 8 / 11; }
+.gridline-row-8-12 { grid-row: 8 / 12; }
+.gridline-row-9-10 { grid-row: 9 / 10; }
+.gridline-row-9-11 { grid-row: 9 / 11; }
+.gridline-row-9-12 { grid-row: 9 / 12; }
+.gridline-row-10-11 { grid-row: 10 / 11; }
+.gridline-row-10-12 { grid-row: 10 / 12; }
+.gridline-row-11-12 { grid-row: 11 / 12; }
+
+.gridline-col-1-2 { grid-column: 1 / 2; }
+.gridline-col-1-3 { grid-column: 1 / 3; }
+.gridline-col-1-4 { grid-column: 1 / 4; }
+.gridline-col-1-5 { grid-column: 1 / 5; }
+.gridline-col-1-6 { grid-column: 1 / 6; }
+.gridline-col-1-7 { grid-column: 1 / 7; }
+.gridline-col-1-8 { grid-column: 1 / 8; }
+.gridline-col-1-9 { grid-column: 1 / 9; }
+.gridline-col-1-10 { grid-column: 1 / 10; }
+.gridline-col-1-11 { grid-column: 1 / 11; }
+.gridline-col-1-12 { grid-column: 1 / 12; }
+.gridline-col-2-3 { grid-column: 2 / 3; }
+.gridline-col-2-4 { grid-column: 2 / 4; }
+.gridline-col-2-5 { grid-column: 2 / 5; }
+.gridline-col-2-6 { grid-column: 2 / 6; }
+.gridline-col-2-7 { grid-column: 2 / 7; }
+.gridline-col-2-8 { grid-column: 2 / 8; }
+.gridline-col-2-9 { grid-column: 2 / 9; }
+.gridline-col-2-10 { grid-column: 2 / 10; }
+.gridline-col-2-11 { grid-column: 2 / 11; }
+.gridline-col-2-12 { grid-column: 2 / 12; }
+.gridline-col-3-4 { grid-column: 3 / 4; }
+.gridline-col-3-5 { grid-column: 3 / 5; }
+.gridline-col-3-6 { grid-column: 3 / 6; }
+.gridline-col-3-7 { grid-column: 3 / 7; }
+.gridline-col-3-8 { grid-column: 3 / 8; }
+.gridline-col-3-9 { grid-column: 3 / 9; }
+.gridline-col-3-10 { grid-column: 3 / 10; }
+.gridline-col-3-11 { grid-column: 3 / 11; }
+.gridline-col-3-12 { grid-column: 3 / 12; }
+.gridline-col-4-5 { grid-column: 4 / 5; }
+.gridline-col-4-6 { grid-column: 4 / 6; }
+.gridline-col-4-7 { grid-column: 4 / 7; }
+.gridline-col-4-8 { grid-column: 4 / 8; }
+.gridline-col-4-9 { grid-column: 4 / 9; }
+.gridline-col-4-10 { grid-column: 4 / 10; }
+.gridline-col-4-11 { grid-column: 4 / 11; }
+.gridline-col-4-12 { grid-column: 4 / 12; }
+.gridline-col-5-6 { grid-column: 5 / 6; }
+.gridline-col-5-7 { grid-column: 5 / 7; }
+.gridline-col-5-8 { grid-column: 5 / 8; }
+.gridline-col-5-9 { grid-column: 5 / 9; }
+.gridline-col-5-10 { grid-column: 5 / 10; }
+.gridline-col-5-11 { grid-column: 5 / 11; }
+.gridline-col-5-12 { grid-column: 5 / 12; }
+.gridline-col-6-7 { grid-column: 6 / 7; }
+.gridline-col-6-8 { grid-column: 6 / 8; }
+.gridline-col-6-9 { grid-column: 6 / 9; }
+.gridline-col-6-10 { grid-column: 6 / 10; }
+.gridline-col-6-11 { grid-column: 6 / 11; }
+.gridline-col-6-12 { grid-column: 6 / 12; }
+.gridline-col-7-8 { grid-column: 7 / 8; }
+.gridline-col-7-9 { grid-column: 7 / 9; }
+.gridline-col-7-10 { grid-column: 7 / 10; }
+.gridline-col-7-11 { grid-column: 7 / 11; }
+.gridline-col-7-12 { grid-column: 7 / 12; }
+.gridline-col-8-9 { grid-column: 8 / 9; }
+.gridline-col-8-10 { grid-column: 8 / 10; }
+.gridline-col-8-11 { grid-column: 8 / 11; }
+.gridline-col-8-12 { grid-column: 8 / 12; }
+.gridline-col-9-10 { grid-column: 9 / 10; }
+.gridline-col-9-11 { grid-column: 9 / 11; }
+.gridline-col-9-12 { grid-column: 9 / 12; }
+.gridline-col-10-11 { grid-column: 10 / 11; }
+.gridline-col-10-12 { grid-column: 10 / 12; }
+.gridline-col-11-12 { grid-column: 11 / 12; }
+
+/* alignment — gap */
+.g-1 { gap: var(--space-1); }
+.g-2 { gap: var(--space-2); }
+.g-3 { gap: var(--space-3); }
+.g-4 { gap: var(--space-4); }
+.g-5 { gap: var(--space-5); }
+.g-6 { gap: var(--space-6); }
+
+.g-x-1 { column-gap: var(--space-1); }
+.g-x-2 { column-gap: var(--space-2); }
+.g-x-3 { column-gap: var(--space-3); }
+.g-x-4 { column-gap: var(--space-4); }
+.g-x-5 { column-gap: var(--space-5); }
+.g-x-6 { column-gap: var(--space-6); }
+
+.g-y-1 { row-gap: var(--space-1); }
+.g-y-2 { row-gap: var(--space-2); }
+.g-y-3 { row-gap: var(--space-3); }
+.g-y-4 { row-gap: var(--space-4); }
+.g-y-5 { row-gap: var(--space-5); }
+.g-y-6 { row-gap: var(--space-6); }
+
+/* alignment — flex. flex is 1d, so only a diagonal of the matrix is allowed:
+   cells-main (justify-content) and items-cross (align-items). cells-cross and
+   items-main are forbidden — no cross-axis cells, and flex owns the main axis.
+   Level-axis-value order: cells/items first, then axis, then position. stretch
+   is the default, so no utility; no self-* (too tiny an adjustment to expose) */
+.cells-main-spaced { justify-content: space-between; }
+.cells-main-start { justify-content: flex-start; }
+.cells-main-center { justify-content: center; }
+.cells-main-end { justify-content: flex-end; }
+
+.items-cross-start { align-items: flex-start; }
+.items-cross-center { align-items: center; }
+.items-cross-end { align-items: flex-end; }
+
+/* alignment — grid. grid is 2d, so the full matrix is allowed: cells/items on
+   both row (inline / justify) and col (block / align) axes. Level-axis-value
+   order throughout. stretch is the default, so no utility; no self-* */
+.cells-row-spaced { justify-content: space-between; }
+.cells-row-start { justify-content: start; }
+.cells-row-center { justify-content: center; }
+.cells-row-end { justify-content: end; }
+
+.cells-col-spaced { align-content: space-between; }
+.cells-col-start { align-content: start; }
+.cells-col-center { align-content: center; }
+.cells-col-end { align-content: end; }
+
+.items-row-start { justify-items: start; }
+.items-row-center { justify-items: center; }
+.items-row-end { justify-items: end; }
+
+.items-col-start { align-items: start; }
+.items-col-center { align-items: center; }
+.items-col-end { align-items: end; }

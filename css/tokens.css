@@ -1,0 +1,346 @@
+/* Token */
+:root {
+  /* Theme color tokens — levels 1..9 = Tailwind 100..900 */
+  /* neutral: one themeless grey */
+  --color-white: #fafafa;
+  --color-black: #0a0a0a;
+  --color-neutral-1: #f5f5f5;
+  --color-neutral-2: #e5e5e5;
+  --color-neutral-3: #d4d4d4;
+  --color-neutral-4: #a3a3a3;
+  --color-neutral-5: #737373;
+  --color-neutral-6: #525252;
+  --color-neutral-7: #404040;
+  --color-neutral-8: #262626;
+  --color-neutral-9: #171717;
+
+  /* Theme color tokens — warm: rose, amber */
+  --color-rose-1: #ffe4e6;
+  --color-rose-2: #fecdd3;
+  --color-rose-3: #fda4af;
+  --color-rose-4: #fb7185;
+  --color-rose-5: #f43f5e;
+  --color-rose-6: #e11d48;
+  --color-rose-7: #be123c;
+  --color-rose-8: #9f1239;
+  --color-rose-9: #881337;
+
+  --color-amber-1: #fef3c7;
+  --color-amber-2: #fde68a;
+  --color-amber-3: #fcd34d;
+  --color-amber-4: #fbbf24;
+  --color-amber-5: #f59e0b;
+  --color-amber-6: #d97706;
+  --color-amber-7: #b45309;
+  --color-amber-8: #92400e;
+  --color-amber-9: #78350f;
+
+  /* Theme color tokens — cold: emerald, sky */
+  --color-emerald-1: #d1fae5;
+  --color-emerald-2: #a7f3d0;
+  --color-emerald-3: #6ee7b7;
+  --color-emerald-4: #34d399;
+  --color-emerald-5: #10b981;
+  --color-emerald-6: #059669;
+  --color-emerald-7: #047857;
+  --color-emerald-8: #065f46;
+  --color-emerald-9: #064e3b;
+
+  --color-sky-1: #e0f2fe;
+  --color-sky-2: #bae6fd;
+  --color-sky-3: #7dd3fc;
+  --color-sky-4: #38bdf8;
+  --color-sky-5: #0ea5e9;
+  --color-sky-6: #0284c7;
+  --color-sky-7: #0369a1;
+  --color-sky-8: #075985;
+  --color-sky-9: #0c4a6e;
+
+  /* Theme color tokens — cool: violet, pink */
+  --color-violet-1: #ede9fe;
+  --color-violet-2: #ddd6fe;
+  --color-violet-3: #c4b5fd;
+  --color-violet-4: #a78bfa;
+  --color-violet-5: #8b5cf6;
+  --color-violet-6: #7c3aed;
+  --color-violet-7: #6d28d9;
+  --color-violet-8: #5b21b6;
+  --color-violet-9: #4c1d95;
+
+  --color-pink-1: #fce7f3;
+  --color-pink-2: #fbcfe8;
+  --color-pink-3: #f9a8d4;
+  --color-pink-4: #f472b6;
+  --color-pink-5: #ec4899;
+  --color-pink-6: #db2777;
+  --color-pink-7: #be185d;
+  --color-pink-8: #9d174d;
+  --color-pink-9: #831843;
+
+  /* Semantic color tokens — role defaults (bg→1, b→2, font→8); edit here to re-default */
+  --bg-neutral: var(--color-neutral-1);
+  --b-neutral: var(--color-neutral-2);
+  --font-neutral: var(--color-neutral-8);
+
+  --bg-rose: var(--color-rose-1);
+  --b-rose: var(--color-rose-2);
+  --font-rose: var(--color-rose-8);
+
+  --bg-amber: var(--color-amber-1);
+  --b-amber: var(--color-amber-2);
+  --font-amber: var(--color-amber-8);
+
+  --bg-emerald: var(--color-emerald-1);
+  --b-emerald: var(--color-emerald-2);
+  --font-emerald: var(--color-emerald-8);
+
+  --bg-sky: var(--color-sky-1);
+  --b-sky: var(--color-sky-2);
+  --font-sky: var(--color-sky-8);
+
+  --bg-violet: var(--color-violet-1);
+  --b-violet: var(--color-violet-2);
+  --font-violet: var(--color-violet-8);
+
+  --bg-pink: var(--color-pink-1);
+  --b-pink: var(--color-pink-2);
+  --font-pink: var(--color-pink-8);
+
+  /* Semantic black/white — themeless pair (bg + font only, no b) */
+  --bg-white: var(--color-white);
+  --bg-black: var(--color-black);
+
+  --font-white: var(--color-white);
+  --font-black: var(--color-black);
+
+  /* Special value tokens — not on any ladder: --none is a zero valid wherever a
+     length is asked for, --inf a length no layout will ever reach */
+  --none: 0;
+  --inf: 9999px;
+
+  /* Unit tokens — the FIXED, px base ladder (the "unit" tier).
+     Small, constant dimensions that must stay crisp and never breathe: hairlines
+     (1px), borders, radii, dividers, micro-gaps. Fixed, not fluid — a border or
+     radius set to a clamp() renders blurry and inconsistent, so these are exact px.
+
+     Base pair (1,3): the 2-family (1,2,4,8…) interleaved with the 3-family
+     (3,6,12,24…) → 1, 2, 3, 4, 6, 8, 12 px. Full coverage of the canonical
+     small-fixed set at minimal step count. Seeded at 1, the hairline floor; do not
+     extend below 1px. The fixed/fluid boundary runs at 4px: unit owns ≤12px fixed,
+     scale owns 4px-upward fluid (scale's fluid 4/8/12 are the counterpart to unit's
+     fixed 4/8/12 — one duality, two behaviors, not duplication).
+
+     Private to tokens.css: reach these only through the semantic families built on
+     unit (line / corner / cast / haze), never from a utility directly. */
+  --unit-1: 1px;
+  --unit-2: 2px;
+  --unit-3: 3px;
+  --unit-4: 4px;
+  --unit-5: 6px;
+  --unit-6: 8px;
+  --unit-7: 12px;
+
+  /* Semantic tokens — line aliases unit: border widths, from the 1px hairline up */
+  --line-1: var(--unit-1);  /* 1px  — hairline */
+  --line-2: var(--unit-2);  /* 2px */
+  --line-3: var(--unit-3);  /* 3px */
+  --line-4: var(--unit-4);  /* 4px */
+  --line-5: var(--unit-5);  /* 6px */
+
+  /* Semantic tokens — corner aliases unit: radii, 2px upward (no 1px radius) */
+  --corner-1: var(--unit-2);  /* 2px */
+  --corner-2: var(--unit-3);  /* 3px */
+  --corner-3: var(--unit-4);  /* 4px */
+  --corner-4: var(--unit-5);  /* 6px */
+  --corner-5: var(--unit-6);  /* 8px */
+  --corner-6: var(--unit-7);  /* 12px */
+
+  /* Semantic tokens — haze aliases unit: blur radius, starting at 4px because a
+     blur narrower than the offset beside it reads as an edge rather than as blur,
+     and equal to it reads flat */
+  --haze-1: var(--unit-4);  /* 4px */
+  --haze-2: var(--unit-5);  /* 6px */
+  --haze-3: var(--unit-6);  /* 8px */
+  --haze-4: var(--unit-7);  /* 12px */
+
+  /* Semantic tokens — cast aliases unit: how far a shadow travels, taken from
+     the fine end of the ladder */
+  --cast-1: var(--unit-2);  /* 2px */
+  --cast-2: var(--unit-3);  /* 3px */
+  --cast-3: var(--unit-4);  /* 4px */
+  --cast-4: var(--unit-5);  /* 6px */
+
+  /* Base proportion tokens — unitless, the source of truth for every fraction,
+     quarter and opacity below. Step = 0.05, so part-N is N * 0.05 */
+  --part-1: 0.05;   --part-2: 0.10;   --part-3: 0.15;   --part-4: 0.20;
+  --part-5: 0.25;   --part-6: 0.30;   --part-7: 0.35;   --part-8: 0.40;
+  --part-9: 0.45;   --part-10: 0.50;  --part-11: 0.55;  --part-12: 0.60;
+  --part-13: 0.65;  --part-14: 0.70;  --part-15: 0.75;  --part-16: 0.80;
+  --part-17: 0.85;  --part-18: 0.90;  --part-19: 0.95;  --part-20: 1;
+
+  /* Base alpha tokens — unitless opacity, the source of truth for every veil below.
+     Doubles, as grain does, because a shadow's shade is read by ratio, not by step */
+  --alpha-1: 0.05;  --alpha-2: 0.10;  --alpha-3: 0.20;  --alpha-4: 0.40;
+
+  /* Semantic tokens — veil: the shade a shadow casts, one step per elevation */
+  --veil-1: var(--alpha-1);
+  --veil-2: var(--alpha-2);
+  --veil-3: var(--alpha-3);
+  --veil-4: var(--alpha-4);
+
+  /* Semantic tokens — op: element opacity. The index counts how faded-out the
+     element is, so --op-1 is mostly there and --op-n mostly not — .op-3 is the
+     most gone. Distinct from veil above, which is sized for shadow shade and is
+     far too faint to dim anything. No 0 and no 1: fully visible is the default,
+     fully invisible should be display or visibility, not opacity */
+  --op-1: var(--part-15);  /* 0.75 — mostly there */
+  --op-2: var(--part-10);  /* 0.50 */
+  --op-3: var(--part-5);   /* 0.25 — mostly not there */
+
+  /* Semantic tokens — quarter: fractions of a whole, typed as a percentage for
+     properties that want a % rather than a number. The index counts quarters, not
+     base steps, so quarter-3 reads as 3/4 without knowing the part step; each one
+     still resolves to part-N * 100%, never a literal. 0 is left out: zero carries
+     no unit and needs no token */
+  --quarter-1: calc(var(--part-5)  * 100%);   /* 1/4 */
+  --quarter-2: calc(var(--part-10) * 100%);   /* 2/4 */
+  --quarter-3: calc(var(--part-15) * 100%);   /* 3/4 */
+  --quarter-4: calc(var(--part-20) * 100%);   /* 4/4 */
+
+  /* Scale tokens — the FLUID, rem/clamp base ladder (the "scale" tier).
+     Responsive dimensions that breathe with the viewport: type sizes, spacing
+     rhythm, component sizing. Each step is clamp(rem, rem + vw, rem) so it ramps
+     from mobile to desktop and honors user font-size; 1rem = 16px at the min.
+
+     Base pair (4,12): the 2-family (4,8,16,32…) interleaved with the 3-family
+     (12,24,48,96…) → 4, 8, 12, 16, 24 … 768 px-equivalent at 14 steps. Full
+     coverage of the canonical web rhythm; seeded at 4 (sub-4px steps are hairlines,
+     unit's job). Above ~128px the layout layer absorbs sizing — a min-size floor
+     with flex wrapping, or explicit grid tracks — so the ladder need not extend
+     further; large layout widths live in layout, not in size utilities.
+     Width steps yield to a narrow container via --quarter-4 (the global max-width cap
+     from "responsive by default").
+
+     Relationship to --unit-*: unit's fixed 4/8/12 are the constant siblings of
+     scale's fluid 4/8/12 — pick fixed or fluid by intent, don't duplicate.
+
+     Private to tokens.css: reach these only through the semantic families built on
+     scale (space / font / size), never from a utility directly. */
+  --scale-1: clamp(0.25rem, 0.2083rem + 0.013vw, 0.375rem);           /* 4px → 6px */
+  --scale-2: clamp(0.5rem, 0.4167rem + 0.026vw, 0.75rem);              /* 8px → 12px */
+  --scale-3: clamp(0.75rem, 0.6875rem + 0.0195vw, 0.9375rem);          /* 12px → 15px */
+  --scale-4: clamp(1rem, 0.9167rem + 0.026vw, 1.25rem);                /* 16px → 20px */
+  --scale-5: clamp(1.5rem, 1.25rem + 0.0781vw, 2.25rem);               /* 24px → 36px */
+  --scale-6: clamp(2rem, 1.6667rem + 0.1042vw, 3rem);                  /* 32px → 48px */
+  --scale-7: clamp(3rem, 2.5rem + 0.1563vw, 4.5rem);                   /* 48px → 72px */
+  --scale-8: clamp(4rem, 3.3333rem + 0.2083vw, 6rem);                  /* 64px → 96px */
+  --scale-9: clamp(6rem, 5rem + 0.3125vw, 9rem);                       /* 96px → 144px */
+  --scale-10: clamp(8rem, 6.6667rem + 0.4167vw, 12rem);                /* 128px → 192px */
+  --scale-11: clamp(12rem, 10rem + 0.625vw, 18rem);                    /* 192px → 288px */
+  --scale-12: clamp(16rem, 13.3333rem + 0.8333vw, 24rem);              /* 256px → 384px */
+  --scale-13: clamp(24rem, 20rem + 1.25vw, 36rem);                     /* 384px → 576px */
+  --scale-14: clamp(32rem, 26.6667rem + 1.6667vw, 48rem);              /* 512px → 768px */
+
+  /* Semantic tokens — space / font / size, aliasing the fluid scale above.
+     Naming keeps its own ladder per role, so space-1 and font-1 read as "the
+     smallest" in each family rather than the same absolute size */
+  --space-1: var(--scale-1);   /* 4px → 6px */
+  --space-2: var(--scale-2);   /* 8px → 12px */
+  --space-3: var(--scale-3);   /* 12px → 15px */
+  --space-4: var(--scale-4);   /* 16px → 20px */
+  --space-5: var(--scale-5);   /* 24px → 36px */
+  --space-6: var(--scale-6);   /* 32px → 48px */
+
+  --font-1: var(--scale-3);   /* 12px → 15px */
+  --font-2: var(--scale-4);   /* 16px → 20px */
+  --font-3: var(--scale-5);   /* 24px → 36px */
+  --font-4: var(--scale-6);   /* 32px → 48px */
+  --font-5: var(--scale-7);   /* 48px → 72px */
+  --font-6: var(--scale-8);   /* 64px → 96px */
+
+  /* Leading & tracking — one of each per font step. Both are functions of size
+     rather than independent knobs: small text opens up, large text tightens.
+     Unitless and em respectively, so each rides its own step's fluid ramp and
+     needs no clamp of its own */
+  --leading-1: 1.6;      --tracking-1: 0.01em;
+  --leading-2: 1.5;      --tracking-2: 0;
+  --leading-3: 1.35;     --tracking-3: -0.01em;
+  --leading-4: 1.2;      --tracking-4: -0.015em;
+  --leading-5: 1.1;      --tracking-5: -0.02em;
+  --leading-6: 1.05;     --tracking-6: -0.025em;
+
+  --size-1: var(--scale-5);   /* 24px → 36px */
+  --size-2: var(--scale-6);   /* 32px → 48px */
+  --size-3: var(--scale-7);   /* 48px → 72px */
+  --size-4: var(--scale-8);   /* 64px → 96px */
+  --size-5: var(--scale-9);   /* 96px → 144px */
+  --size-6: var(--scale-10);  /* 128px → 192px */
+  --size-7: var(--scale-11);  /* 192px → 288px */
+  --size-8: var(--scale-12);  /* 256px → 384px */
+  --size-9: var(--scale-13);  /* 384px → 576px */
+  --size-10: var(--scale-14); /* 512px → 768px */
+
+  /* Font family tokens — Tailwind stacks (reading = serif, ui = sans, code = mono) */
+  --font-reading: ui-serif, Georgia, Cambria, "Times New Roman", Times, serif;
+  --font-ui: ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  --font-code: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+
+  /* Font weight & style tokens */
+  --font-light: 300;
+  --font-bold: 700;
+  --font-italic: italic;
+
+  /* Shadow tokens — elevation, complete: one step carries offset, blur and shade
+     together, because box-shadow is one property and every system ships elevation as
+     a countable ladder rather than as axes. Vertical only — x is 0, since that is the
+     direction a shadow falls. Each index lines up across cast, haze and veil, even
+     though each family reaches for a different level of its own base */
+  --shadow-1: 0 var(--cast-1) var(--haze-1) rgb(0 0 0 / var(--veil-1));  /* 0 2px 4px  */
+  --shadow-2: 0 var(--cast-2) var(--haze-2) rgb(0 0 0 / var(--veil-2));  /* 0 3px 6px  */
+  --shadow-3: 0 var(--cast-3) var(--haze-3) rgb(0 0 0 / var(--veil-3));  /* 0 4px 8px  */
+  --shadow-4: 0 var(--cast-4) var(--haze-4) rgb(0 0 0 / var(--veil-4));  /* 0 6px 12px */
+}
+
+/* Dark — only the semantic role tokens move, so every existing bg / font / b
+   utility themes itself. Inverts the light convention (bg→1, b→2, font→8):
+   the surface takes the darkest level, text the lightest, and borders level 7
+   rather than 9 so an edge stays visible against its own fill. */
+@media (prefers-color-scheme: dark) {
+  :root {
+   --bg-neutral: var(--color-neutral-9);
+   --b-neutral: var(--color-neutral-7);
+   --font-neutral: var(--color-neutral-1);
+
+   --bg-rose: var(--color-rose-9);
+   --b-rose: var(--color-rose-7);
+   --font-rose: var(--color-rose-1);
+
+   --bg-amber: var(--color-amber-9);
+   --b-amber: var(--color-amber-7);
+   --font-amber: var(--color-amber-1);
+
+   --bg-emerald: var(--color-emerald-9);
+   --b-emerald: var(--color-emerald-7);
+   --font-emerald: var(--color-emerald-1);
+
+   --bg-sky: var(--color-sky-9);
+   --b-sky: var(--color-sky-7);
+   --font-sky: var(--color-sky-1);
+
+   --bg-violet: var(--color-violet-9);
+   --b-violet: var(--color-violet-7);
+   --font-violet: var(--color-violet-1);
+
+   --bg-pink: var(--color-pink-9);
+   --b-pink: var(--color-pink-7);
+   --font-pink: var(--color-pink-1);
+
+    /* The themeless pair swaps too, so .bg-white keeps meaning "the light
+       surface" and .bg-black "the dark one" whichever theme is active */
+   --bg-white: var(--color-black);
+   --bg-black: var(--color-white);
+
+   --font-white: var(--color-black);
+   --font-black: var(--color-white);
+  }
+}
