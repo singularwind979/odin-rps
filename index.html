@@ -28,32 +28,78 @@
 </head>
 
 <body>
-  <!-- Header: site identity and primary navigation -->
   <header>
-    <nav>
-      <ul class="nav">
-        <li><a>Home</a></li>
-        <li><a>About</a></li>
-        <li><a>Contact</a></li>
-      </ul>
-    </nav>
+    <h1 class="title">Rock, Paper, Scissors</h1>
   </header>
 
-  <!-- Main: the page's primary content landmark -->
   <main>
-    <!-- Intro: the single <h1> for the page lives here -->
-    <section>
-      <h1>Your page heading here!</h1>
+    <section id="rules">
+      <h2 class="title">Rules:</h2>
+      <ul>
+        <li>
+          <span class="icon-rock">Rock</span>
+          <span class="icon-greater-than">beats</span>
+          <span class="icon-scissors">Scissors</span>
+        </li>
+        <li>
+          <span class="icon-scissors">Scissors</span>
+          <span class="icon-greater-than">beats</span>
+          <span class="icon-paper">Papper</span>
+        </li>
+        <li>
+          <span class="icon-paper">Papper</span>
+          <span class="icon-greater-than">beats</span>
+          <span class="icon-rock">Rock</span>
+        </li>
+      </ul>
     </section>
 
-    <!-- A themed block. -->
-    <section>
-      <h2>Section title</h2>
-      <p>Replace with your content.</p>
+    <section id="playground">
+      <h2 class="title">Playground:</h2>
+      <div id="human">
+        <div class="profile">
+          <span class="icon-user">Human</span>
+          <div>
+            <label for="human-score">Score:</label>
+            <output id="human-score">0</output>
+          </div>
+        </div>
+        <div class="moves">
+          <button class="icon-rock" type="button" data-move="rock"></button>
+          <button class="icon-paper" type="button" data-move="paper"></button>
+          <button class="icon-scissors" type="button" data-move="scissors"></button>
+        </div>
+      </div>
+
+      <div id="control">
+        <div>VS</div>
+        <div>
+          <label for="round">Round:</label>
+          <output id="round">0</output>
+        </div>
+        <div class="actions">
+          <button id="start-btn" class="icon-start" type="button">Start Game</button>
+          <button id="reset-btn" class="icon-reset" type="button">New Game</button>
+        </div>
+      </div>
+
+      <div id="computer">
+        <div class="profile">
+          <span class="icon-pc">Computer</span>
+          <div>
+            <label for="computer-score">Score:</label>
+            <output id="computer-score">0</output>
+          </div>
+        </div>
+        <div class="moves">
+          <span class="icon-rock" data-move="rock"></span>
+          <span class="icon-paper" data-move="paper"></span>
+          <span class="icon-scissors" data-move="scissors"></span>
+        </div>
+      </div>
     </section>
   </main>
 
-  <!-- Footer: site-level information -->
   <footer>
     <p>&copy; <time datetime="2026">2026</time> Singularwind</p>
   </footer>
