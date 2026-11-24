@@ -1,14 +1,16 @@
-/* Index — entry point of the CSS framework:
+/* Entry — entry point of the stylesheets:
   declares the layer order,
-  imports the three layers,
+  imports the framework and UI styles,
   offers an opt-in layout-debug outline */
 
 /* priority (low → high):
-  tokens < elements < utilities */
-@layer tokens, elements, utilities;
+  tokens < elements < ui < utilities */
+@layer tokens, elements, ui, utilities;
 
 @import url('tokens.css')       layer(tokens);
 @import url('elements.css')     layer(elements);
+@import url('fonts.css')        layer(ui);
+@import url('icons.css')        layer(ui);
 @import url('utilities.css')    layer(utilities);
 
 /* opt-in debug utility:

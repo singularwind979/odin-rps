@@ -28,11 +28,20 @@ npm run watch
 ```text
 .
 ├── index.html        # Page entry point
-├── css/
-│   ├── index.css     # Stylesheet entry point
+├── styles/
+│   ├── entry.css     # Stylesheet entry point
 │   ├── tokens.css    # Design tokens
 │   ├── elements.css  # Default styles for bare HTML elements
+│   ├── fonts.css     # Font-face declarations
+│   ├── icons.css     # Icon classes
 │   └── utilities.css # Utility classes for color, typography, box, and layout
+├── assets/
+│   ├── ui/
+│   │   ├── fonts/    # Font files
+│   │   └── icons/    # Icon files
+│   └── media/
+│       ├── images/   # Image files
+│       └── videos/   # Video files
 ├── src/
 │   └── index.ts      # TypeScript entry point
 ├── dist/
