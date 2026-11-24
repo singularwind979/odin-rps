@@ -1,7 +1,7 @@
 /* Index — entry point of the CSS framework:
   declares the layer order,
   imports the three layers,
-  keeps the layout-debug outline */
+  offers an opt-in layout-debug outline */
 
 /* priority (low → high):
   tokens < elements < utilities */
@@ -11,6 +11,7 @@
 @import url('elements.css')     layer(elements);
 @import url('utilities.css')    layer(utilities);
 
-/* unlayered and !important on purpose:
-  the layout-debug outline must beat every other rule */
-* { outline: 1px solid red !important; }
+/* opt-in debug utility:
+  add `debug` to <body> to outline every element;
+  unlayered and !important on purpose, so it beats every other rule */
+body.debug, body.debug * { outline: 1px solid red !important; }
